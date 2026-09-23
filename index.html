@@ -218,9 +218,7 @@
       transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
       cursor: pointer;
     }
-    .btn-lux-outline:hover,
-    .artista-actions-section .btn-lux-outline:hover,
-    .action-card .btn-lux-outline:hover {
+    .btn-lux-outline:hover {
       background-color: #000000 !important;
       color: #FFFFFF !important;
       border-color: #000000 !important;
@@ -747,16 +745,24 @@
     }
 
     /* ========================================================
-       SECTION 3: ACTION PATHWAYS ("What Would You Like to Do?")
+       SECTION 3: ACTION PATHWAYS ("What Would You Like to Do?") - DARK MODE
        ======================================================== */
     .artista-actions-section {
-      background-color: var(--lux-cream);
-      padding: 90px 0;
-      border-bottom: 1px solid var(--lux-border-subtle);
+      background-color: #0A0A0C;
+      padding: 95px 0 90px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      position: relative;
     }
     .actions-header {
       text-align: center;
       margin-bottom: 50px;
+    }
+    .actions-header h2 {
+      color: #FFFFFF !important;
+    }
+    .actions-header p {
+      color: #D1D1D6 !important;
     }
     .actions-grid {
       display: grid;
@@ -764,8 +770,8 @@
       gap: 24px;
     }
     .action-card {
-      background-color: #0C0C0E;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background-color: #121216;
+      border: 1px solid rgba(255, 255, 255, 0.09);
       border-radius: var(--radius-box);
       padding: 38px 34px;
       display: flex;
@@ -774,57 +780,50 @@
       min-height: 230px;
       position: relative;
       overflow: hidden;
-      transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .action-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      background: linear-gradient(135deg, rgba(212, 175, 55, 0.18) 0%, rgba(20, 20, 24, 0.95) 50%, rgba(184, 142, 62, 0.15) 100%);
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-      z-index: 1;
-    }
-    .action-card:hover::before {
-      opacity: 1;
+      transition: border-color 0.3s ease, background-color 0.3s ease;
     }
     .action-card:hover {
-      border-color: rgba(212, 175, 55, 0.6);
-      background-color: #121216;
+      border-color: rgba(212, 175, 55, 0.65) !important;
+      background-color: #202029 !important; /* Lighter shade of black / rich charcoal on hover */
     }
     .action-card > * {
       position: relative;
       z-index: 2;
     }
     .action-num-badge {
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 700;
       color: var(--lux-gold-light);
-      letter-spacing: 0.2em;
+      letter-spacing: 0.18em;
       margin-bottom: 20px;
       display: inline-block;
     }
     .action-title {
       color: #FFFFFF;
       font-size: 22px;
-      font-weight: 500;
+      font-weight: 400;
       line-height: 1.35;
       letter-spacing: -0.01em;
       margin-bottom: 30px;
     }
-    /* Buttons inside black action card */
+    /* Buttons inside dark action card */
     .action-card .btn-lux-outline {
       background-color: transparent;
-      color: #FFFFFF !important;
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: var(--lux-gold-light) !important;
+      border: 1px solid rgba(212, 175, 55, 0.45);
       transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
     }
+    /* On card hover: make button turn gold */
+    .action-card:hover .btn-lux-outline {
+      background-color: var(--lux-gold) !important;
+      color: #0A0A0C !important;
+      border-color: var(--lux-gold) !important;
+    }
+    /* Direct button hover: bright gold */
     .action-card .btn-lux-outline:hover {
-      background-color: #000000 !important;
-      color: #FFFFFF !important;
-      border-color: #FFFFFF !important;
+      background-color: #D4AF37 !important;
+      color: #0A0A0C !important;
+      border-color: #D4AF37 !important;
     }
     .action-footer {
       margin-top: auto;
@@ -1636,51 +1635,60 @@
     }
 
     /* ========================================================
-       SECTION 8: SPECIALISED WORKFORCE
+       SECTION 8: SPECIALISED WORKFORCE (CLEAN SPLIT, ZERO BLACK GRADIENT OVER IMAGE)
        ======================================================== */
     .artista-workforce-section {
-      position: relative;
-      background-color: #060608;
+      background-color: #0A0A0C;
       border-bottom: 1px solid var(--lux-border-light);
       overflow: hidden;
-    }
-    .workforce-bg {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 58%;
-      height: 100%;
-      background-image: url('https://cdn.shopify.com/s/files/1/0709/2089/6754/files/Architect-Round-table-1_page-0015.webp?v=1726600024');
-      background-size: cover;
-      background-position: center right;
-      opacity: 0.7;
-    }
-    .workforce-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, #060608 0%, #060608 45%, rgba(6, 6, 8, 0.82) 70%, rgba(6, 6, 8, 0.4) 100%);
-    }
-    .workforce-container {
       position: relative;
+    }
+    .workforce-split {
+      display: grid;
+      grid-template-columns: 38% 62%;
+      min-height: 480px;
+      align-items: stretch;
+    }
+    .workforce-text-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 70px 40px 70px max(24px, calc((100vw - 1240px) / 2 + 24px));
+      background-color: #0A0A0C;
       z-index: 2;
-      padding: 100px 28px;
     }
     .workforce-content {
-      max-width: 580px;
+      max-width: 460px;
     }
     .artista-workforce-section h2 {
       color: var(--lux-white);
-      font-size: clamp(32px, 4vw, 46px);
+      font-size: clamp(28px, 3.4vw, 42px);
       font-weight: 300;
-      line-height: 1.15;
+      line-height: 1.18;
       letter-spacing: -0.01em;
-      margin: 0 0 20px 0;
+      margin: 0 0 16px 0;
     }
     .artista-workforce-section p {
       color: var(--lux-text-white-dim);
-      font-size: 17px;
+      font-size: 15.5px;
       line-height: 1.65;
-      margin: 0 0 36px 0;
+      margin: 0 0 28px 0;
+    }
+    .workforce-image-col {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 440px;
+      overflow: hidden;
+      background-color: #1A1715;
+      border-left: 1px solid rgba(212, 175, 55, 0.12);
+    }
+    .workforce-image-col img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 75% center;
+      display: block;
     }
 
     /* ========================================================
@@ -2000,6 +2008,24 @@
         font-weight: 500 !important;
         white-space: nowrap !important;
       }
+
+      /* Specialised Workforce: Clean Split on Mobile */
+      .workforce-split {
+        grid-template-columns: 1fr !important;
+        min-height: auto !important;
+      }
+      .workforce-image-col {
+        min-height: 280px !important;
+        height: 320px !important;
+        border-left: none !important;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.12) !important;
+      }
+      .workforce-image-col img {
+        object-position: 72% center !important;
+      }
+      .workforce-text-col {
+        padding: 48px 24px 54px 24px !important;
+      }
     }
 
     @media screen and (max-width: 900px) {
@@ -2044,18 +2070,13 @@
       .tech-card {
         padding: 32px 24px;
       }
-      .workforce-bg {
-        width: 100%;
-        opacity: 0.35;
-      }
     }
   
     /* ========================================================
        LUXURY SUBTLE GOLD GRADIENT HOVER EFFECTS (SMOOTH & ELEGANT)
        ======================================================== */
-    /* Light Cards: Range Cards, Action Cards, Accordions */
+    /* Light Cards: Range Cards, Accordions */
     .lux-range-card,
-    .action-card,
     .accordion {
       position: relative;
       overflow: hidden;
@@ -2063,7 +2084,6 @@
     }
 
     .lux-range-card::before,
-    .action-card::before,
     .accordion::before,
     .usp-card::before {
       content: '';
@@ -2078,7 +2098,6 @@
     }
 
     .lux-range-card:hover::before,
-    .action-card:hover::before,
     .accordion:hover::before,
     .usp-card:hover::before {
       opacity: 1;
@@ -2512,9 +2531,9 @@
   <section class="artista-actions-section" id="whatToDo">
     <div class="lux-container">
       <div class="actions-header">
-        <div class="lux-eyebrow">Quick Pathways</div>
-        <h2 class="lux-section-title-dark">What Would You Like to Do?</h2>
-        <p class="lux-section-desc-dark" style="margin: 0 auto;">Select an action below to explore our signature textures, locate authorized regional distributors, or download the comprehensive brochure.</p>
+        <div class="lux-eyebrow" style="color: var(--lux-gold-light);">Quick Pathways</div>
+        <h2 class="lux-section-title-light">What Would You Like to Do?</h2>
+        <p class="lux-section-desc-light" style="margin: 0 auto;">Select an action below to explore our signature textures, locate authorized regional distributors, or download the comprehensive brochure.</p>
       </div>
 
       <div class="actions-grid">
@@ -2954,27 +2973,27 @@
 
       <!-- Center Showcase Arena -->
       <div class="formulation-arena">
-        <!-- Left Column USPs (01 & 03) -->
+        <!-- Left Column (01 & 03) -->
         <div class="usp-column usp-col-left">
-          <!-- USP 1 -->
+          <!-- Card 1: Durable and long-lasting -->
           <div class="usp-card" id="uspCard1">
-            <div class="usp-num-pill">USP 01 / PACKAGING</div>
-            <h3 class="usp-heading">Available in 1Ltr Packing</h3>
-            <p class="usp-desc">Specially crafted metallic finish gallon preserves formula viscosity, prevents aeration, and protects texture integrity.</p>
+            <div class="usp-num-pill">01 / DURABILITY</div>
+            <h3 class="usp-heading">Durable and Long-Lasting</h3>
+            <p class="usp-desc">Engineered for high-end interior resilience. Resists fading, preserves tactile integrity, and delivers washable longevity for luxury feature walls.</p>
             <div class="usp-feature-tag">
               <span class="usp-dot"></span>
-              <span>Signature 1 Liter Canister</span>
+              <span>High-Resilience Interior Finish</span>
             </div>
           </div>
 
-          <!-- USP 3 -->
+          <!-- Card 3: Extensive Color Range -->
           <div class="usp-card" id="uspCard3">
-            <div class="usp-num-pill">USP 03 / APPLICATION</div>
-            <h3 class="usp-heading">Multi-Tool Versatility</h3>
-            <p class="usp-desc">Formulated to respond effortlessly to brush, roller, trowel, and scraper for unique custom texture depth.</p>
+            <div class="usp-num-pill">03 / COLOR RANGE</div>
+            <h3 class="usp-heading">Extensive Color Range</h3>
+            <p class="usp-desc">A rich spectrum of architectural shades, metallic sheens, and luminous tones crafted to harmonise with diverse interior design palettes.</p>
             <div class="usp-feature-tag">
               <span class="usp-dot"></span>
-              <span>Brush, Roller, Trowel & Scraper</span>
+              <span>Curated Designer Palette & Tones</span>
             </div>
           </div>
         </div>
@@ -2982,29 +3001,29 @@
         <!-- Center Product Hero Image -->
         <div class="product-center-pod" id="productCenterPod">
           <img src="https://www.diamondpaints.com/cdn/shop/files/Artista_luxurious_paint_effect.webp?v=1770964471" alt="Diamond Paints Artista Gallon" class="pod-product-img" id="podProductImg">
-          </div>
+        </div>
 
-        <!-- Right Column USPs (02 & 04) -->
+        <!-- Right Column (02 & 04) -->
         <div class="usp-column usp-col-right">
-          <!-- USP 2 -->
+          <!-- Card 2: Eco-Friendly -->
           <div class="usp-card" id="uspCard2">
-            <div class="usp-num-pill">USP 02 / PURITY</div>
-            <h3 class="usp-heading">Eco-Friendly & Safe</h3>
-            <p class="usp-desc">100% Water-based and low VOC. Certified free of lead, mercury, chrome, and harmful heavy metals for healthy luxury living.</p>
+            <div class="usp-num-pill">02 / ECO-FRIENDLY</div>
+            <h3 class="usp-heading">Eco-Friendly</h3>
+            <p class="usp-desc">100% Water-based with low VOC emissions. Certified free of lead, mercury, chrome, and harmful heavy metals for healthy luxury living environments.</p>
             <div class="usp-feature-tag">
               <span class="usp-dot"></span>
               <span>Zero Lead • Non-Toxic Grade</span>
             </div>
           </div>
 
-          <!-- USP 4 -->
+          <!-- Card 4: Highly Customizable -->
           <div class="usp-card" id="uspCard4">
-            <div class="usp-num-pill">USP 04 / DURABILITY</div>
-            <h3 class="usp-heading">Durable & Long-Lasting</h3>
-            <p class="usp-desc">Engineered for high-end interior resilience. Resists fading, delivers washable longevity, and protects luxury feature walls.</p>
+            <div class="usp-num-pill">04 / CUSTOMIZATION</div>
+            <h3 class="usp-heading">Highly Customizable</h3>
+            <p class="usp-desc">Responds fluidly to trowel, spatula, roller, and brush techniques, empowering master artisans to sculpt bespoke textures and tactile depths.</p>
             <div class="usp-feature-tag">
               <span class="usp-dot"></span>
-              <span>High-Resilience Interior Finish</span>
+              <span>Bespoke Textures & Multi-Tool Versatility</span>
             </div>
           </div>
         </div>
@@ -3027,7 +3046,7 @@
     <div class="dealers-container">
       <div class="dealers-header">
         <div class="lux-eyebrow">Authorized Network</div>
-        <h2 class="lux-section-title-dark">How to Buy Artista</h2>
+        <h2 class="lux-section-title-dark">Where to Buy Artista</h2>
         <p class="lux-section-desc-dark" style="margin: 0 auto;">Artista textures are available through select distributors and texture specialists across Pakistan.</p>
       </div>
 
@@ -4366,14 +4385,17 @@ Lahore, Punjab</a>
        SECTION 8: SPECIALISED WORKFORCE
        ======================================================== -->
   <section class="artista-workforce-section">
-    <div class="workforce-bg"></div>
-    <div class="workforce-overlay"></div>
-    <div class="lux-container workforce-container">
-      <div class="workforce-content">
-        <div class="lux-eyebrow" style="color: var(--lux-gold-light);">Certified Craftsmen</div>
-        <h2>SPECIALISED WORKFORCE</h2>
-        <p>These textures require trained applicators for best results. Connect with our approved experts to ensure flawless architectural execution.</p>
-        <a href="https://wa.me/923000228686" target="_blank" rel="noopener" class="btn-lux-gold">Request a Call</a>
+    <div class="workforce-split">
+      <div class="workforce-text-col">
+        <div class="workforce-content">
+          <div class="lux-eyebrow" style="color: var(--lux-gold-light);">Certified Craftsmen</div>
+          <h2>SPECIALISED WORKFORCE</h2>
+          <p>These textures require trained applicators for best results. Connect with our approved experts to ensure flawless architectural execution.</p>
+          <a href="https://wa.me/923000228686" target="_blank" rel="noopener" class="btn-lux-gold">Request a Call</a>
+        </div>
+      </div>
+      <div class="workforce-image-col">
+        <img src="https://cdn.shopify.com/s/files/1/0709/2089/6754/files/Architect-Round-table-1_page-0015.webp?v=1726600024" alt="Certified Artista Craftsman applying finish" loading="lazy">
       </div>
     </div>
   </section>
