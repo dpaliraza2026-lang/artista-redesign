@@ -1,0 +1,4792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artista Luxurious Paint Effects — Diamond Paints</title>
+  <meta name="description" content="Artista by Diamond Paints offers decorative texture paint effects with rich finishes. Create elegant feature walls that add depth, style, and visual impact to interiors.">
+
+  <!-- Inter Font Only -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ========================================================
+       CSS RESET & ARCHITECTURAL LUXURY DESIGN SYSTEM
+       ======================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    :root {
+      /* Primary Light / White Palette */
+      --lux-white: #FFFFFF;
+      --lux-cream: #FAF9F5;
+      --lux-surface-light: #F4F3EE;
+      --lux-surface-alt: #EFECE6;
+      --lux-border-light: #E5E2DA;
+      --lux-border-subtle: #ECEAE3;
+      
+      /* Dark Contrast Palette */
+      --lux-dark-bg: #0C0C0E;
+      --lux-dark-card: #141418;
+      --lux-dark-card-alt: #1B1B22;
+      --lux-dark-border: rgba(255, 255, 255, 0.1);
+      --lux-dark-border-subtle: rgba(255, 255, 255, 0.06);
+
+      /* Typography Tones */
+      --lux-text-dark: #121214;
+      --lux-text-body: #4A4A52;
+      --lux-text-muted: #7A7A85;
+      --lux-text-white: #FFFFFF;
+      --lux-text-white-dim: #D1D1D6;
+
+      /* Gold Accent (Restrained, Warm, Metallic) */
+      --lux-gold: #B88E3E;
+      --lux-gold-light: #D4AF37;
+      --lux-gold-champagne: #E9D5A8;
+      --lux-gold-muted: #8E6D2B;
+      --lux-gold-border: rgba(184, 142, 62, 0.35);
+      --lux-gold-border-subtle: rgba(184, 142, 62, 0.18);
+
+      /* Consistent Radii Across All Boxes */
+      --radius-box: 16px;
+      --radius-sm: 8px;
+      --radius-pill: 40px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--lux-white);
+      color: var(--lux-text-dark);
+    }
+
+    body {
+      background-color: var(--lux-white);
+      color: var(--lux-text-dark);
+      line-height: 1.6;
+      font-size: 15px;
+      overflow-x: hidden;
+    }
+
+    /* STRICT RULES: ZERO DROP SHADOW, ZERO GLOW, ZERO ON-HOVER LIFT */
+    *, *:hover, *:focus, *:active {
+      box-shadow: none !important;
+      text-shadow: none !important;
+      filter: none !important;
+    }
+
+    /* Allow transform for marquee + USP card slide animations + product pod + hero story tracks + cursor preview + gold ambient orbs */
+    *:not(.marquee-track):not(.marquee-track *):not(.usp-card):not(.product-center-pod):not(.hero-story-track):not(.hero-story-track *):not(.story-cursor-preview):not(.story-cursor-preview *):not(.gold-ambient-orb):not(.gold-ambient-orb *) {
+      transform: none !important;
+    }
+    *:not(.marquee-track):not(.marquee-track *):not(.usp-card):not(.product-center-pod):not(.hero-story-track):not(.hero-story-track *):not(.story-cursor-preview):not(.story-cursor-preview *):not(.gold-ambient-orb):not(.gold-ambient-orb *):hover,
+    *:not(.marquee-track):not(.marquee-track *):not(.usp-card):not(.product-center-pod):not(.hero-story-track):not(.hero-story-track *):not(.story-cursor-preview):not(.story-cursor-preview *):not(.gold-ambient-orb):not(.gold-ambient-orb *):focus,
+    *:not(.marquee-track):not(.marquee-track *):not(.usp-card):not(.product-center-pod):not(.hero-story-track):not(.hero-story-track *):not(.story-cursor-preview):not(.story-cursor-preview *):not(.gold-ambient-orb):not(.gold-ambient-orb *):active {
+      transform: none !important;
+    }
+
+    /* Containers & Spacing */
+    .lux-container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .lux-eyebrow {
+      display: inline-block;
+      color: var(--lux-gold);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      margin-bottom: 14px;
+    }
+
+    .lux-section-title-dark {
+      color: var(--lux-text-dark);
+      font-size: clamp(30px, 4.2vw, 48px);
+      font-weight: 300;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px 0;
+    }
+    .lux-section-title-dark strong,
+    .lux-section-title-dark b {
+      font-weight: 600;
+    }
+
+    .lux-section-title-light {
+      color: var(--lux-text-white);
+      font-size: clamp(30px, 4.2vw, 48px);
+      font-weight: 300;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px 0;
+    }
+    .lux-section-title-light strong,
+    .lux-section-title-light b {
+      font-weight: 600;
+    }
+
+    .lux-section-desc-dark {
+      color: var(--lux-text-body);
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 620px;
+      margin: 0 0 32px 0;
+    }
+
+    .lux-section-desc-light {
+      color: var(--lux-text-white-dim);
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 620px;
+      margin: 0 0 32px 0;
+    }
+
+    /* Consistent Luxury Buttons */
+    .btn-lux-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: var(--lux-text-dark);
+      color: var(--lux-white) !important;
+      border: 1px solid var(--lux-text-dark);
+      padding: 14px 34px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      text-decoration: none !important;
+      border-radius: var(--radius-sm);
+      transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-lux-primary:hover {
+      background-color: var(--lux-gold);
+      border-color: var(--lux-gold);
+      color: var(--lux-white) !important;
+    }
+
+    .btn-lux-gold {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: var(--lux-gold);
+      color: var(--lux-white) !important;
+      border: 1px solid var(--lux-gold);
+      padding: 14px 34px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      text-decoration: none !important;
+      border-radius: var(--radius-sm);
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-lux-gold:hover {
+      background-color: var(--lux-gold-light);
+      border-color: var(--lux-gold-light);
+      color: #000000 !important;
+    }
+
+    .btn-lux-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: transparent;
+      color: var(--lux-text-dark) !important;
+      border: 1px solid var(--lux-border-light);
+      padding: 13px 30px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      text-decoration: none !important;
+      border-radius: var(--radius-sm);
+      transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-lux-outline:hover,
+    .artista-actions-section .btn-lux-outline:hover,
+    .action-card .btn-lux-outline:hover {
+      background-color: #000000 !important;
+      color: #FFFFFF !important;
+      border-color: #000000 !important;
+    }
+
+    .btn-lux-outline-light {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: transparent;
+      color: var(--lux-white) !important;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 13px 30px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      text-decoration: none !important;
+      border-radius: var(--radius-sm);
+      transition: border-color 0.2s ease, color 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-lux-outline-light:hover {
+      border-color: var(--lux-gold-light);
+      color: var(--lux-gold-light) !important;
+    }
+
+    /* ========================================================
+       SECTION 1: HERO SECTION (SPLIT EDITORIAL + 2-COL STORY REEL)
+       ======================================================== */
+    .hero-cinematic-section {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      background-color: #0A0A0C;
+      border-bottom: 1px solid var(--lux-border-light);
+      overflow: hidden;
+      padding: 60px 0;
+    }
+    .hero-cinematic-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #0A0A0C 0%, #121216 60%, #0D0D10 100%);
+      z-index: 1;
+    }
+
+    /* Ambient Luxury Gold Shader Animation */
+    .hero-gold-ambient {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 1;
+      background:
+        radial-gradient(ellipse 65% 55% at 78% 32%, rgba(212, 175, 55, 0.16) 0%, rgba(184, 142, 62, 0.06) 45%, transparent 75%),
+        radial-gradient(ellipse 60% 50% at 18% 68%, rgba(235, 212, 155, 0.12) 0%, rgba(197, 160, 89, 0.04) 50%, transparent 75%);
+      background-size: 130% 130%, 140% 140%;
+      animation: luxuryGoldAurora 22s ease-in-out infinite alternate;
+    }
+
+    .gold-ambient-orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      will-change: transform, opacity;
+    }
+    .orb-1 {
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.22) 0%, rgba(184, 142, 62, 0.10) 35%, transparent 70%);
+      top: -12%;
+      right: 2%;
+      animation: ambientGoldFloat1 18s ease-in-out infinite alternate;
+    }
+    .orb-2 {
+      width: 580px;
+      height: 580px;
+      background: radial-gradient(circle, rgba(235, 212, 155, 0.18) 0%, rgba(197, 160, 89, 0.08) 40%, transparent 70%);
+      bottom: -15%;
+      left: 6%;
+      animation: ambientGoldFloat2 24s ease-in-out infinite alternate;
+    }
+    .orb-3 {
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.14) 0%, rgba(184, 142, 62, 0.05) 45%, transparent 70%);
+      top: 35%;
+      left: 40%;
+      animation: ambientGoldFloat3 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes luxuryGoldAurora {
+      0% {
+        background-position: 0% 0%, 100% 100%;
+        opacity: 0.85;
+      }
+      50% {
+        background-position: 50% 30%, 30% 70%;
+        opacity: 1;
+      }
+      100% {
+        background-position: 100% 80%, 0% 20%;
+        opacity: 0.88;
+      }
+    }
+
+    @keyframes ambientGoldFloat1 {
+      0% {
+        transform: translate3d(0, 0, 0) scale(1);
+        opacity: 0.85;
+      }
+      50% {
+        transform: translate3d(-70px, 45px, 0) scale(1.15);
+        opacity: 1;
+      }
+      100% {
+        transform: translate3d(35px, -35px, 0) scale(0.95);
+        opacity: 0.88;
+      }
+    }
+
+    @keyframes ambientGoldFloat2 {
+      0% {
+        transform: translate3d(0, 0, 0) scale(1);
+        opacity: 0.8;
+      }
+      50% {
+        transform: translate3d(65px, -40px, 0) scale(1.12);
+        opacity: 1;
+      }
+      100% {
+        transform: translate3d(-35px, 25px, 0) scale(0.92);
+        opacity: 0.82;
+      }
+    }
+
+    @keyframes ambientGoldFloat3 {
+      0% {
+        transform: translate3d(0, 0, 0) scale(0.95);
+        opacity: 0.75;
+      }
+      50% {
+        transform: translate3d(-45px, -25px, 0) scale(1.18);
+        opacity: 0.95;
+      }
+      100% {
+        transform: translate3d(50px, 35px, 0) scale(1);
+        opacity: 0.8;
+      }
+    }
+
+    .hero-layout-grid {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 52px;
+      align-items: center;
+    }
+    .hero-content-col {
+      text-align: left;
+    }
+    .hero-content-col .lux-eyebrow {
+      color: var(--lux-gold-champagne);
+      margin-bottom: 14px;
+      text-align: left;
+    }
+    .hero-main-heading {
+      color: var(--lux-white);
+      font-size: clamp(34px, 4.2vw, 58px);
+      font-weight: 300;
+      line-height: 1.14;
+      letter-spacing: -0.02em;
+      margin: 0 0 20px 0;
+      text-align: left;
+    }
+    .hero-main-heading .gold-title-accent {
+      color: var(--lux-gold-light);
+      font-weight: 500;
+      display: block;
+    }
+    .hero-lead-text {
+      color: var(--lux-text-white-dim);
+      font-size: clamp(16px, 1.5vw, 19px);
+      line-height: 1.65;
+      max-width: 560px;
+      margin: 0 0 32px 0;
+      text-align: left;
+      font-weight: 400;
+    }
+    .hero-features-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 10px;
+      margin-bottom: 38px;
+    }
+    .hero-pill-feature {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      padding: 9px 20px;
+      border-radius: var(--radius-pill);
+      color: var(--lux-white);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+    .hero-pill-dot {
+      width: 6px;
+      height: 6px;
+      background-color: var(--lux-gold-light);
+      border-radius: 50%;
+    }
+    .hero-btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 16px;
+    }
+
+    /* Right Side: 2-Col Infinite Story Animation Reel */
+    .hero-stories-col {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    .hero-stories-viewport {
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+      height: 600px;
+      overflow: hidden;
+      mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
+    }
+    .hero-stories-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      height: 100%;
+    }
+    .hero-story-col {
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+      cursor: pointer;
+    }
+    .hero-story-track {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      will-change: transform;
+    }
+    .hero-story-card {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 9 / 14;
+      border-radius: 14px;
+      overflow: hidden;
+      background-color: #16161a;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      flex-shrink: 0;
+      box-shadow: none !important;
+      transition: border-color 0.3s ease;
+    }
+    .hero-story-col:hover .hero-story-card {
+      border-color: rgba(212, 175, 55, 0.4);
+    }
+    .hero-story-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      pointer-events: none;
+    }
+    .hero-story-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.22) 0%, transparent 40%, rgba(0, 0, 0, 0.82) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 12px;
+      pointer-events: none;
+    }
+    .hero-story-badge {
+      align-self: flex-start;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--lux-gold-light);
+      background: rgba(12, 12, 14, 0.72);
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+    .hero-story-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .hero-story-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: #FFFFFF;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+    .hero-story-desc {
+      font-size: 10px;
+      color: rgba(255, 255, 255, 0.75);
+      letter-spacing: 0.02em;
+    }
+
+    @media screen and (max-width: 991px) {
+      .hero-cinematic-section {
+        padding: 60px 0 40px 0;
+        min-height: auto;
+      }
+      .hero-layout-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .hero-content-col {
+        text-align: left;
+      }
+      .hero-stories-viewport {
+        max-width: 440px;
+        height: 500px;
+        margin: 0 auto;
+      }
+    }
+
+    /* Floating Cursor Story Preview Tooltip */
+    .story-cursor-preview {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 270px;
+      height: 405px;
+      border-radius: 16px;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 999999;
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0.92);
+      transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+                  visibility 0.22s;
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      background-color: #0A0A0C;
+      will-change: left, top, opacity, transform;
+    }
+    .story-cursor-preview.active {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+    .story-preview-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .story-preview-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .story-preview-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, transparent 45%, rgba(0, 0, 0, 0.9) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 16px;
+    }
+    .story-preview-badge {
+      align-self: flex-start;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--lux-gold-light);
+      background: rgba(12, 12, 14, 0.8);
+      padding: 4px 10px;
+      border-radius: 4px;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+    }
+    .story-preview-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .story-preview-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #FFFFFF;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+    .story-preview-sub {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.8);
+      letter-spacing: 0.02em;
+    }
+    @media (pointer: coarse), (max-width: 991px) {
+      .story-cursor-preview {
+        display: none !important;
+      }
+    }
+
+    /* ========================================================
+       SECTION 2: INSTAGRAM FEED SECTION (PRESERVED CONTENT)
+       ======================================================== */
+    .artista-instagram-section {
+      background-color: var(--lux-white);
+      color: var(--lux-text-dark);
+      padding: 90px 0;
+      border-bottom: 1px solid var(--lux-border-subtle);
+    }
+    .insta-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .insta-header h2 {
+      font-size: 30px;
+      font-weight: 600;
+      color: var(--lux-text-dark);
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+    .insta-header p {
+      font-size: 16px;
+      color: var(--lux-text-muted);
+      font-weight: 400;
+    }
+    .insta-carousel-wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 20px;
+      overflow-x: auto;
+      scrollbar-width: thin;
+    }
+    .insta-grid-stack {
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 12px;
+    }
+    .insta-post-card {
+      flex: 0 0 220px;
+      aspect-ratio: 4 / 5;
+      border-radius: var(--radius-box);
+      overflow: hidden;
+      background-color: #111;
+      position: relative;
+      text-decoration: none;
+      border: 1px solid var(--lux-border-light);
+    }
+    .insta-post-media {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .insta-post-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .insta-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.75) 100%);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 14px;
+    }
+    .insta-overlay-badge {
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .insta-icon {
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+    }
+    .insta-action {
+      text-align: center;
+      margin-top: 36px;
+    }
+    .btn-visit-instagram {
+      display: inline-block;
+      background-color: var(--lux-text-dark);
+      color: var(--lux-white) !important;
+      padding: 16px 42px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      text-decoration: none !important;
+      transition: background-color 0.2s ease;
+    }
+    .btn-visit-instagram:hover {
+      background-color: #26262B;
+    }
+
+    /* ========================================================
+       SECTION 3: ACTION PATHWAYS ("What Would You Like to Do?")
+       ======================================================== */
+    .artista-actions-section {
+      background-color: var(--lux-cream);
+      padding: 90px 0;
+      border-bottom: 1px solid var(--lux-border-subtle);
+    }
+    .actions-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .actions-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .action-card {
+      background-color: #0C0C0E;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-box);
+      padding: 38px 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 230px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .action-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.18) 0%, rgba(20, 20, 24, 0.95) 50%, rgba(184, 142, 62, 0.15) 100%);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1;
+    }
+    .action-card:hover::before {
+      opacity: 1;
+    }
+    .action-card:hover {
+      border-color: rgba(212, 175, 55, 0.6);
+      background-color: #121216;
+    }
+    .action-card > * {
+      position: relative;
+      z-index: 2;
+    }
+    .action-num-badge {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--lux-gold-light);
+      letter-spacing: 0.2em;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+    .action-title {
+      color: #FFFFFF;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin-bottom: 30px;
+    }
+    /* Buttons inside black action card */
+    .action-card .btn-lux-outline {
+      background-color: transparent;
+      color: #FFFFFF !important;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+    .action-card .btn-lux-outline:hover {
+      background-color: #000000 !important;
+      color: #FFFFFF !important;
+      border-color: #FFFFFF !important;
+    }
+    .action-footer {
+      margin-top: auto;
+    }
+
+    /* ========================================================
+       SECTION 4: SIGNATURE COLLECTION (EQUAL SIZED & CENTERED LAST ROW)
+       ======================================================== */
+    .artista-range-section {
+      background-color: var(--lux-white);
+      padding: 110px 0 100px 0;
+      border-bottom: 1px solid var(--lux-border-subtle);
+    }
+    .range-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 60px auto;
+    }
+    
+    /* Desktop 8-column grid: 4 cards row 1, 3 cards row 2 centered with exact matching width */
+    .range-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 24px;
+    }
+    .range-cards-grid > .range-card-col:nth-child(1) { grid-column: 1 / span 2; }
+    .range-cards-grid > .range-card-col:nth-child(2) { grid-column: 3 / span 2; }
+    .range-cards-grid > .range-card-col:nth-child(3) { grid-column: 5 / span 2; }
+    .range-cards-grid > .range-card-col:nth-child(4) { grid-column: 7 / span 2; }
+    .range-cards-grid > .range-card-col:nth-child(5) { grid-column: 2 / span 2; margin-top: 8px; }
+    .range-cards-grid > .range-card-col:nth-child(6) { grid-column: 4 / span 2; margin-top: 8px; }
+    .range-cards-grid > .range-card-col:nth-child(7) { grid-column: 6 / span 2; margin-top: 8px; }
+
+    /* Legacy aliases fallback */
+    .range-row-four,
+    .range-row-three-centered {
+      display: contents;
+    }
+
+    .range-card-col {
+      display: flex;
+    }
+    .lux-range-card {
+      background-color: var(--lux-white);
+      border: 1px solid var(--lux-border-light);
+      border-radius: var(--radius-box);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-decoration: none !important;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+    .lux-range-card:hover {
+      border-color: var(--lux-gold);
+      background-color: #FCFBF9;
+    }
+    .card-media-wrap {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background-color: #F0EEE9;
+      position: relative;
+      border-bottom: 1px solid var(--lux-border-subtle);
+    }
+    .card-media-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .card-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background-color: rgba(18, 18, 20, 0.75);
+      color: var(--lux-white);
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+    }
+    .card-body {
+      padding: 24px 22px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+    .card-title {
+      color: var(--lux-text-dark);
+      font-size: 19px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
+      transition: color 0.2s ease;
+    }
+    .lux-range-card:hover .card-title {
+      color: var(--lux-gold);
+    }
+    .card-spec-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 24px;
+    }
+    .spec-tag {
+      display: inline-block;
+      font-size: 11px;
+      color: var(--lux-text-body);
+      background-color: var(--lux-surface-light);
+      border: 1px solid var(--lux-border-subtle);
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+    }
+    .card-action {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--lux-gold);
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      border-top: 1px solid var(--lux-border-subtle);
+      padding-top: 16px;
+      margin-top: auto;
+    }
+    .explore-arrow {
+      color: var(--lux-gold);
+      flex-shrink: 0;
+    }
+
+    /* ========================================================
+       SECTION 5: ECO-CONSCIOUS SCIENCE (ULTRA-SMOOTH VELOCITY TICKER)
+       ======================================================== */
+    .artista-eco-section {
+      background-color: var(--lux-surface-light);
+      padding: 90px 0;
+      border-bottom: 1px solid var(--lux-border-light);
+      overflow: hidden;
+      position: relative;
+    }
+    .eco-intro-block {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 50px auto;
+    }
+    .eco-intro-block h2 {
+      font-size: clamp(28px, 3.8vw, 42px);
+      font-weight: 300;
+      color: var(--lux-text-dark);
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+    .eco-intro-block p {
+      color: var(--lux-gold);
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* Infinite Marquee Viewport */
+    .marquee-viewport {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      padding: 16px 0;
+      cursor: grab;
+    }
+    .marquee-viewport::before,
+    .marquee-viewport::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 140px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .marquee-viewport::before {
+      left: 0;
+      background: linear-gradient(90deg, var(--lux-surface-light) 0%, transparent 100%);
+    }
+    .marquee-viewport::after {
+      right: 0;
+      background: linear-gradient(270deg, var(--lux-surface-light) 0%, transparent 100%);
+    }
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      will-change: transform;
+      user-select: none;
+    }
+    .marquee-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      background-color: var(--lux-white);
+      border: 1px solid var(--lux-border-light);
+      padding: 16px 28px;
+      border-radius: var(--radius-pill);
+      margin-right: 20px;
+      flex-shrink: 0;
+      transition: border-color 0.2s ease;
+    }
+    .marquee-item:hover {
+      border-color: var(--lux-gold);
+    }
+    .marquee-diamond {
+      width: 8px;
+      height: 8px;
+      background-color: var(--lux-gold);
+      border-radius: 2px;
+    }
+    .marquee-text {
+      color: var(--lux-text-dark);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    
+    /* ========================================================
+       PINNED SCROLL-DRIVEN FORMULATION & USPs EXPERIENCE
+       ======================================================== */
+    .master-formulation-track {
+      position: relative;
+      background-color: var(--lux-cream);
+      /* Height gives generous scroll runway for 4 distinct USP reveals */
+      height: 320vh;
+      border-bottom: 1px solid var(--lux-border-light);
+    }
+    .master-sticky-stage {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 28px 30px 28px;
+      /* CRITICAL FIX: overflow must be visible so cards can slide out from behind the product */
+      overflow: visible;
+      background-color: var(--lux-cream);
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* Central Arena */
+    .formulation-arena {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      justify-content: center;
+      gap: 36px;
+      width: 100%;
+      max-width: 1280px;
+      flex-grow: 1;
+      margin: 10px 0;
+      /* overflow visible allows card to cross into the product pod zone */
+      overflow: visible;
+    }
+
+    .formulation-header {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .formulation-title {
+      font-size: clamp(26px, 3.2vw, 40px);
+      font-weight: 300;
+      color: var(--lux-text-dark);
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+    .scroll-instruction {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--lux-gold);
+      font-weight: 600;
+      transition: opacity 0.3s ease;
+    }
+    .scroll-instruction svg {
+      animation: bounceArrow 1.5s infinite ease-in-out;
+    }
+    @keyframes bounceArrow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(3px); }
+    }
+
+    /* USP Columns */
+    .usp-column {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      position: relative;
+      /* z-index lower than product pod so cards slide FROM BEHIND it */
+      z-index: 2;
+    }
+    .usp-col-left {
+      align-items: flex-end;
+    }
+    .usp-col-right {
+      align-items: flex-start;
+    }
+
+    /* USP Cards — JS handles all animation via inline styles */
+    .usp-card {
+      background-color: var(--lux-white);
+      border: 1px solid var(--lux-border-light);
+      border-radius: var(--radius-box);
+      padding: 24px 22px;
+      max-width: 350px;
+      width: 100%;
+      pointer-events: none;
+      position: relative;
+      z-index: 2;
+      opacity: 0;
+    }
+    .usp-card.active  { border-color: var(--lux-gold); }
+    .usp-card.passed  { border-color: var(--lux-border-light); }
+
+
+    .usp-num-pill {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--lux-gold);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .usp-heading {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--lux-text-dark);
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .usp-desc {
+      font-size: 13px;
+      color: var(--lux-text-body);
+      line-height: 1.55;
+      margin-bottom: 12px;
+    }
+    .usp-feature-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--lux-surface-light);
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--lux-text-dark);
+    }
+    .usp-dot {
+      width: 6px;
+      height: 6px;
+      background-color: var(--lux-gold);
+      border-radius: 50%;
+    }
+
+    /* Center Product Pod — appears first, sits above cards */
+    .product-center-pod {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 10px 16px;
+      z-index: 25;
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .product-center-pod.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .pod-product-img {
+      max-width: 100%;
+      width: 410px;
+      height: auto;
+      max-height: 54vh;
+      object-fit: contain;
+      display: block;
+      position: relative;
+      z-index: 26;
+      pointer-events: none;
+    }
+    /* Footer / CTA */
+    .formulation-footer-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 900px;
+      padding-top: 14px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .formulation-cta {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .formulation-cta.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* ========================================================
+       MOBILE VIEW: CONVENTIONAL STATIC SECTION (NO ANIMATION)
+       ======================================================== */
+    @media screen and (max-width: 991px) {
+      .master-formulation-track {
+        height: auto !important;
+        padding: 80px 0 !important;
+      }
+      .master-sticky-stage {
+        position: static !important;
+        height: auto !important;
+        padding: 0 20px !important;
+        overflow: visible !important;
+        justify-content: flex-start !important;
+      }
+      .scroll-instruction {
+        display: none !important;
+      }
+      .formulation-arena {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 16px !important;
+        margin: 30px 0 !important;
+        width: 100% !important;
+      }
+      .product-center-pod {
+        order: 1 !important;
+        opacity: 1 !important;
+        transform: none !important;
+        margin: 10px 0 24px 0 !important;
+        padding: 0 !important;
+      }
+      .pod-product-img {
+        width: 260px !important;
+        max-height: none !important;
+      }
+      .usp-column {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+        width: 100% !important;
+        align-items: center !important;
+      }
+      .usp-col-left {
+        order: 2 !important;
+      }
+      .usp-col-right {
+        order: 3 !important;
+      }
+      .usp-card {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        transform: none !important;
+        transition: none !important;
+        max-width: 520px !important;
+        width: 100% !important;
+        background-color: var(--lux-white) !important;
+        border: 1px solid var(--lux-border-light) !important;
+      }
+      .formulation-footer-bar {
+        border-top: none !important;
+        padding-top: 14px !important;
+      }
+      .formulation-cta {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+      }
+      .formulation-cta .btn-lux-primary {
+        width: 100% !important;
+        max-width: 340px !important;
+        text-align: center !important;
+      }
+    }
+
+    /* ========================================================
+       NEW SECTION: SIGNATURE GALLON & PACKAGING SHOWCASE
+       ======================================================== */
+    .artista-product-spotlight {
+      background-color: var(--lux-white);
+      padding: 110px 0;
+      border-bottom: 1px solid var(--lux-border-subtle);
+    }
+    .spotlight-container {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 70px;
+      align-items: center;
+    }
+    .spotlight-visual-box {
+      background-color: var(--lux-cream);
+      border: 1px solid var(--lux-border-light);
+      border-radius: var(--radius-box);
+      padding: 60px 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .spotlight-visual-box::before {
+      content: '';
+      position: absolute;
+      bottom: 24px;
+      width: 65%;
+      height: 20px;
+      background: radial-gradient(ellipse at center, rgba(0,0,0,0.06) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .spotlight-product-img {
+      max-width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: contain;
+      position: relative;
+      z-index: 1;
+    }
+    .spotlight-content h2 {
+      font-size: clamp(32px, 4vw, 46px);
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--lux-text-dark);
+      margin-bottom: 20px;
+    }
+    .spotlight-content p {
+      color: var(--lux-text-body);
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+    .spotlight-specs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+    .spotlight-spec-card {
+      background-color: var(--lux-surface-light);
+      border: 1px solid var(--lux-border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 18px 20px;
+    }
+    .spotlight-spec-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--lux-gold);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .spotlight-spec-desc {
+      font-size: 14px;
+      color: var(--lux-text-dark);
+      font-weight: 500;
+    }
+
+    /* ========================================================
+       SECTION 6: HOW TO BUY ARTISTA (DEALER LOCATOR)
+       ======================================================== */
+    .artista-dealers-section {
+      background-color: var(--lux-cream);
+      padding: 100px 0;
+      border-bottom: 1px solid var(--lux-border-light);
+    }
+    .dealers-container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .dealers-header {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    .selector-box {
+      background-color: var(--lux-white);
+      border: 1px solid var(--lux-border-light);
+      border-radius: var(--radius-box);
+      padding: 34px;
+      margin-bottom: 36px;
+    }
+    .selector-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--lux-gold);
+      margin-bottom: 12px;
+    }
+    .custom-select-wrapper {
+      position: relative;
+    }
+    select#dealers-selector {
+      width: 100%;
+      padding: 16px 20px;
+      font-size: 15px;
+      color: var(--lux-text-dark);
+      background-color: var(--lux-white);
+      border: 1px solid var(--lux-border-light);
+      border-radius: var(--radius-sm);
+      appearance: none;
+      cursor: pointer;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+    select#dealers-selector:focus {
+      border-color: var(--lux-gold);
+    }
+    .select-arrow {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      pointer-events: none;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 6px solid var(--lux-gold);
+      margin-top: -3px;
+    }
+
+    /* Accordions */
+    .dealers-accordions {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .accordion {
+      background-color: var(--lux-white);
+      border: 1px solid var(--lux-border-light);
+      border-radius: var(--radius-box);
+      overflow: hidden;
+      transition: border-color 0.2s ease;
+    }
+    .accordion:hover {
+      border-color: var(--lux-gold-border);
+    }
+    .accordion-header {
+      padding: 22px 28px;
+      color: var(--lux-text-dark);
+      font-size: 17px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    .accordion-header:hover {
+      color: var(--lux-gold);
+    }
+    .accordion-header::after {
+      content: '+';
+      font-size: 20px;
+      color: var(--lux-gold);
+      font-weight: 400;
+    }
+    .accordion-header.active {
+      background-color: #FAF8F4;
+      border-bottom: 1px solid var(--lux-border-subtle);
+      color: var(--lux-gold);
+    }
+    .accordion-header.active::after {
+      content: '−';
+    }
+    .accordion-content {
+      padding: 22px 28px;
+      display: none;
+      background-color: var(--lux-white);
+      flex-direction: column;
+      gap: 12px;
+    }
+    .accordion-header.active + .accordion-content {
+      display: flex;
+    }
+    .accordion-content a {
+      color: var(--lux-text-body);
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1.5;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: color 0.2s ease;
+    }
+    .accordion-content a:hover {
+      color: var(--lux-gold);
+    }
+
+    /* ========================================================
+       SECTION 7: TECHNICAL INFORMATION (DARK SECTION CONTRAST)
+       ======================================================== */
+    .artista-tech-section {
+      background-color: var(--lux-dark-bg);
+      padding: 110px 0;
+      border-bottom: 1px solid var(--lux-dark-border);
+    }
+    .tech-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .pack-badge {
+      display: inline-block;
+      border: 1px solid var(--lux-gold-light);
+      color: var(--lux-gold-light);
+      padding: 8px 24px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      border-radius: var(--radius-pill);
+      margin-top: 14px;
+    }
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+    .tech-card {
+      background-color: var(--lux-dark-card);
+      border: 1px solid var(--lux-dark-border);
+      border-radius: var(--radius-box);
+      padding: 44px 40px;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s ease;
+    }
+    .tech-card:hover {
+      border-color: var(--lux-gold-border);
+    }
+    .tech-card-header {
+      border-bottom: 1px solid var(--lux-dark-border);
+      padding-bottom: 20px;
+      margin-bottom: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .tech-card-title {
+      color: var(--lux-text-white);
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .tech-category-icon {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--lux-gold-light);
+      font-weight: 600;
+    }
+    .tech-details-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .tech-item {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding-bottom: 20px;
+    }
+    .tech-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .item-label {
+      color: var(--lux-gold-light);
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+    .item-body {
+      color: var(--lux-text-white-dim);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .item-body b {
+      color: var(--lux-white);
+      font-weight: 500;
+    }
+
+    /* ========================================================
+       SECTION 8: SPECIALISED WORKFORCE
+       ======================================================== */
+    .artista-workforce-section {
+      position: relative;
+      background-color: #060608;
+      border-bottom: 1px solid var(--lux-border-light);
+      overflow: hidden;
+    }
+    .workforce-bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 58%;
+      height: 100%;
+      background-image: url('https://cdn.shopify.com/s/files/1/0709/2089/6754/files/Architect-Round-table-1_page-0015.webp?v=1726600024');
+      background-size: cover;
+      background-position: center right;
+      opacity: 0.7;
+    }
+    .workforce-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #060608 0%, #060608 45%, rgba(6, 6, 8, 0.82) 70%, rgba(6, 6, 8, 0.4) 100%);
+    }
+    .workforce-container {
+      position: relative;
+      z-index: 2;
+      padding: 100px 28px;
+    }
+    .workforce-content {
+      max-width: 580px;
+    }
+    .artista-workforce-section h2 {
+      color: var(--lux-white);
+      font-size: clamp(32px, 4vw, 46px);
+      font-weight: 300;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin: 0 0 20px 0;
+    }
+    .artista-workforce-section p {
+      color: var(--lux-text-white-dim);
+      font-size: 17px;
+      line-height: 1.65;
+      margin: 0 0 36px 0;
+    }
+
+    /* ========================================================
+       SECTION 9: DOWNLOAD BROCHURE
+       ======================================================== */
+    .artista-brochure-section {
+      background-color: var(--lux-white);
+      border-bottom: 1px solid var(--lux-border-light);
+      padding: 100px 0;
+    }
+    .brochure-container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 24px;
+      text-align: center;
+    }
+    .brochure-preview-frame {
+      background-color: var(--lux-cream);
+      border: 1px solid var(--lux-border-light);
+      border-radius: var(--radius-box);
+      padding: 44px 30px;
+      margin-bottom: 36px;
+      display: inline-block;
+      max-width: 780px;
+      width: 100%;
+    }
+    .brochure-preview-frame img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border: 1px solid var(--lux-border-subtle);
+      border-radius: var(--radius-sm);
+    }
+
+    /* ========================================================
+       SECTION 10: GET EXPERT HELP (FORM & WHATSAPP)
+       ======================================================== */
+    .artista-contact-section {
+      background-color: var(--lux-surface-light);
+      padding: 110px 0;
+    }
+    .contact-container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .contact-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background-color: var(--lux-white);
+      border: 1px solid var(--lux-border-light);
+      padding: 48px 44px;
+      border-radius: var(--radius-box);
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+    .form-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--lux-text-dark);
+    }
+    .form-control {
+      background-color: var(--lux-white);
+      border: 1px solid var(--lux-border-light);
+      color: var(--lux-text-dark);
+      padding: 15px 18px;
+      font-size: 15px;
+      border-radius: var(--radius-sm);
+      outline: none;
+      width: 100%;
+      transition: border-color 0.2s ease;
+    }
+    .form-control::placeholder {
+      color: #9E9EA7;
+    }
+    .form-control:focus {
+      border-color: var(--lux-gold);
+    }
+    textarea.form-control {
+      min-height: 110px;
+      resize: vertical;
+    }
+    .contact-divider {
+      display: flex;
+      align-items: center;
+      margin: 28px 0;
+      text-align: center;
+    }
+    .contact-divider::before,
+    .contact-divider::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid var(--lux-border-light);
+    }
+    .contact-divider span {
+      padding: 0 16px;
+      color: var(--lux-text-muted);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+    }
+    .whatsapp-cta-box {
+      text-align: center;
+    }
+    .btn-whatsapp-lux {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      background-color: #0E1A14;
+      color: #25D366 !important;
+      border: 1px solid rgba(37, 211, 102, 0.35);
+      padding: 16px 28px;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      text-decoration: none !important;
+      border-radius: var(--radius-sm);
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+    .btn-whatsapp-lux:hover {
+      background-color: #152B20;
+      border-color: #25D366;
+    }
+
+    /* ========================================================
+       RESPONSIVE ADAPTATIONS & MOBILE STICKY STACKING CARDS
+       ======================================================== */
+    @media screen and (min-width: 992px) and (max-width: 1200px) {
+      .range-cards-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+      }
+      .range-cards-grid > .range-card-col:nth-child(1),
+      .range-cards-grid > .range-card-col:nth-child(2),
+      .range-cards-grid > .range-card-col:nth-child(3),
+      .range-cards-grid > .range-card-col:nth-child(4),
+      .range-cards-grid > .range-card-col:nth-child(5),
+      .range-cards-grid > .range-card-col:nth-child(6),
+      .range-cards-grid > .range-card-col:nth-child(7) {
+        grid-column: span 2 !important;
+        margin-top: 0 !important;
+      }
+    }
+
+    /* Mobile: Signature Collection Stacks into Fixed Area per Card */
+    @media screen and (max-width: 991px) {
+      .artista-range-section {
+        padding: 60px 0 50px 0;
+      }
+      .range-header {
+        margin-bottom: 28px;
+      }
+      .range-cards-grid {
+        display: block !important;
+        position: relative !important;
+        max-width: min(350px, 88vw) !important;
+        margin: 0 auto !important;
+        padding-bottom: 0 !important;
+      }
+      .range-cards-grid > .range-card-col {
+        grid-column: auto !important;
+        width: 100% !important;
+        display: flex !important;
+        position: -webkit-sticky !important;
+        position: sticky !important;
+        top: 16px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 0 !important;
+        margin-bottom: 45vh !important;
+        transition: opacity 0.15s ease, visibility 0.15s ease !important;
+      }
+      .range-cards-grid > .range-card-col:last-child {
+        margin-bottom: 30px !important;
+      }
+      /* Stacking order: each subsequent card sits on top of previous */
+      .range-cards-grid > .range-card-col:nth-child(1) { z-index: 10 !important; }
+      .range-cards-grid > .range-card-col:nth-child(2) { z-index: 11 !important; }
+      .range-cards-grid > .range-card-col:nth-child(3) { z-index: 12 !important; }
+      .range-cards-grid > .range-card-col:nth-child(4) { z-index: 13 !important; }
+      .range-cards-grid > .range-card-col:nth-child(5) { z-index: 14 !important; }
+      .range-cards-grid > .range-card-col:nth-child(6) { z-index: 15 !important; }
+      .range-cards-grid > .range-card-col:nth-child(7) { z-index: 16 !important; }
+
+      .lux-range-card {
+        width: 100% !important;
+        background-color: #FFFFFF !important;
+        border: 1px solid var(--lux-border-light) !important;
+        border-radius: 20px !important;
+        overflow: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
+        box-sizing: border-box !important;
+      }
+      .card-media-wrap {
+        width: 100% !important;
+        aspect-ratio: 2 / 3 !important;
+        height: auto !important;
+        max-height: none !important;
+        min-height: unset !important;
+        position: relative !important;
+        overflow: hidden !important;
+        background-color: #F4F1EA !important;
+        display: block !important;
+        flex-shrink: 0 !important;
+        box-sizing: border-box !important;
+      }
+      .card-media-wrap img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+        display: block !important;
+      }
+      .card-body {
+        padding: 16px 18px 14px 18px !important;
+        height: 148px !important;
+        min-height: 148px !important;
+        max-height: 148px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        flex-shrink: 0 !important;
+      }
+      .card-title {
+        font-size: 19px !important;
+        line-height: 1.25 !important;
+        margin-bottom: 6px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
+      .card-spec-tags {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 5px !important;
+        align-content: flex-start !important;
+        height: 48px !important;
+        min-height: 48px !important;
+        max-height: 48px !important;
+        overflow: hidden !important;
+        margin-bottom: 0 !important;
+      }
+      .spec-tag {
+        font-size: 10.5px !important;
+        padding: 3px 8px !important;
+        line-height: 1.25 !important;
+      }
+      .card-action {
+        margin-top: auto !important;
+        padding-top: 10px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+      }
+
+      /* Eco-Conscious Science: Compact Elegant Infinite Scroll Buttons on Mobile */
+      .artista-eco-section {
+        padding: 56px 0 52px 0 !important;
+      }
+      .eco-intro-block {
+        margin: 0 auto 30px auto !important;
+        padding: 0 20px !important;
+      }
+      .eco-intro-block h2 {
+        font-size: clamp(22px, 5.5vw, 28px) !important;
+        line-height: 1.25 !important;
+        margin-bottom: 8px !important;
+      }
+      .eco-intro-block p {
+        font-size: 13px !important;
+        letter-spacing: 0.04em !important;
+      }
+      .marquee-viewport {
+        padding: 8px 0 !important;
+      }
+      .marquee-viewport::before,
+      .marquee-viewport::after {
+        width: 48px !important;
+      }
+      .marquee-item {
+        padding: 10px 18px !important;
+        gap: 10px !important;
+        margin-right: 12px !important;
+        border-radius: 9999px !important;
+      }
+      .marquee-diamond {
+        width: 6px !important;
+        height: 6px !important;
+        border-radius: 1.5px !important;
+      }
+      .marquee-text {
+        font-size: 12.5px !important;
+        letter-spacing: 0.03em !important;
+        font-weight: 500 !important;
+        white-space: nowrap !important;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .actions-grid {
+        grid-template-columns: 1fr;
+      }
+      .spotlight-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .tech-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media screen and (max-width: 650px) {
+      .marquee-viewport::before,
+      .marquee-viewport::after {
+        width: 32px !important;
+      }
+      .marquee-item {
+        padding: 8px 15px !important;
+        gap: 8px !important;
+        margin-right: 10px !important;
+      }
+      .marquee-diamond {
+        width: 5px !important;
+        height: 5px !important;
+      }
+      .marquee-text {
+        font-size: 11.5px !important;
+      }
+      .spotlight-specs-grid {
+        grid-template-columns: 1fr;
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      .contact-form {
+        padding: 30px 22px;
+      }
+      .tech-card {
+        padding: 32px 24px;
+      }
+      .workforce-bg {
+        width: 100%;
+        opacity: 0.35;
+      }
+    }
+  
+    /* ========================================================
+       LUXURY SUBTLE GOLD GRADIENT HOVER EFFECTS (SMOOTH & ELEGANT)
+       ======================================================== */
+    /* Light Cards: Range Cards, Action Cards, Accordions */
+    .lux-range-card,
+    .action-card,
+    .accordion {
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .lux-range-card::before,
+    .action-card::before,
+    .accordion::before,
+    .usp-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(135deg, rgba(235, 212, 155, 0.22) 0%, rgba(255, 255, 255, 0.02) 42%, rgba(197, 160, 89, 0.18) 100%);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1;
+    }
+
+    .lux-range-card:hover::before,
+    .action-card:hover::before,
+    .accordion:hover::before,
+    .usp-card:hover::before {
+      opacity: 1;
+    }
+
+    .lux-range-card:hover {
+      border-color: rgba(184, 142, 62, 0.65);
+      background-color: #FDFAF5;
+    }
+
+    
+
+    .accordion:hover {
+      border-color: rgba(184, 142, 62, 0.6);
+    }
+
+    /* Ensure card children stay cleanly layered above gradient */
+    .lux-range-card > *,
+    .action-card > *,
+    .accordion > *,
+    .usp-card > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Dark Technical Cards: Deep Velvet with Metallic Gold Sheen */
+    .tech-card {
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .tech-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.14) 0%, rgba(197, 160, 89, 0.03) 50%, rgba(184, 142, 62, 0.16) 100%);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1;
+    }
+
+    .tech-card:hover::before {
+      opacity: 1;
+    }
+
+    .tech-card:hover {
+      border-color: rgba(212, 175, 55, 0.55);
+      background-color: #17171E;
+    }
+
+    .tech-card > * {
+      position: relative;
+      z-index: 2;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================
+       SECTION 1: HERO SECTION (SPLIT EDITORIAL + 2-COL STORY REEL)
+       ======================================================== -->
+  <section class="hero-cinematic-section" id="artistaHero">
+    <div class="hero-cinematic-overlay"></div>
+    <div class="hero-gold-ambient" aria-hidden="true">
+      <div class="gold-ambient-orb orb-1"></div>
+      <div class="gold-ambient-orb orb-2"></div>
+      <div class="gold-ambient-orb orb-3"></div>
+    </div>
+    <div class="lux-container hero-layout-grid">
+      <!-- Left Column: Editorial & Conversion Copy (Aligned Left) -->
+      <div class="hero-content-col">
+        <div class="lux-eyebrow">A World of Possibilities</div>
+        <h1 class="hero-main-heading">
+          Artista Luxurious<br>
+          <span class="gold-title-accent">Paint Effects</span>
+        </h1>
+        <p class="hero-lead-text">
+          Elevate walls with high-end textures designed for durability and design impact.
+        </p>
+
+        <div class="hero-features-bar">
+          <div class="hero-pill-feature">
+            <span class="hero-pill-dot"></span>
+            <span>Durable and long-lasting</span>
+          </div>
+          <div class="hero-pill-feature">
+            <span class="hero-pill-dot"></span>
+            <span>Eco-Friendly</span>
+          </div>
+          <div class="hero-pill-feature">
+            <span class="hero-pill-dot"></span>
+            <span>Extensive Color Range</span>
+          </div>
+          <div class="hero-pill-feature">
+            <span class="hero-pill-dot"></span>
+            <span>Highly Customizable</span>
+          </div>
+        </div>
+
+        <div class="hero-btn-group">
+          <a href="#artistaRange" class="btn-lux-gold">Explore Collection</a>
+          <a href="#buyArtista" class="btn-lux-outline-light">Find Specialists</a>
+        </div>
+      </div>
+
+      <!-- Right Column: 2-Col Infinite Story Animation Loop -->
+      <div class="hero-stories-col">
+        <div class="hero-stories-viewport" id="heroStoriesViewport">
+          <div class="hero-stories-grid">
+            <!-- Column 1: Moves upward smoothly, slows on hover -->
+            <div class="hero-story-col" id="heroStoryCol1" title="Hover to slow animation">
+              <div class="hero-story-track" id="heroStoryTrack1">
+                <!-- Set A -->
+                <div class="hero-story-card">
+                  <img src="https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/808375148_18110502391938907_1889952359863348314_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=O7NxZgc1JKYQ7kNvwEcHn_J&_nc_oc=AdrvNwlaJfP9GdSn3E0J36UJzG2jgLvJyQHNULz4XidYcWTpvXJkZTGwl32-8BUXqqI&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=Esdx1e6cRkXmjZQ5SuPLLg&_nc_tpa=Q5bMBQL5Y6LnE4ZUh1GtxqxMyaEEJlBY5k18o5Lx39GnKSCCQAYFZUA03CFAWI2KNbR-fJCAreSw0o4Y&oh=00_AQILfuSo6OLIGEqYlNAxIcmB9AO80uiDfSxE8PIDeZR4pQ&oe=6AB7BE87" alt="Artista Glitz Application" loading="eager">
+                  <div class="hero-story-overlay">
+                    <span class="hero-story-badge">GLITZ</span>
+                    <div class="hero-story-meta">
+                      <span class="hero-story-name">Metallic Sheen</span>
+                      <span class="hero-story-desc">Signature Textured Feel</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hero-story-card">
+                  <img src="https://www.diamondpaints.com/cdn/shop/files/WhatsApp-Image-2024-02-14-at-5.50.28-PM-1.webp?v=1726596016" alt="Artista Marble Finish" loading="eager">
+                  <div class="hero-story-overlay">
+                    <span class="hero-story-badge">MARBLE</span>
+                    <div class="hero-story-meta">
+                      <span class="hero-story-name">Italian Marble</span>
+                      <span class="hero-story-desc">Architectural Venetian Depth</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hero-story-card">
+                  <img src="https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/790317928_18109930495938907_7239027504800240601_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=n2D59S0THYAQ7kNvwGjiI0q&_nc_oc=Adrsr1a2oxcqpotB4aOCMJHlYcvdr1Rgo100C6EpcRCZ_X8mtw4yyUwPWMHf81IFTzM&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=Esdx1e6cRkXmjZQ5SuPLLg&_nc_tpa=Q5bMBQL7Km0-tf5WLDV6zPzKx1qQ5w4HT1OTSs3wf74fWns_Ie82Ahf3iUvzDMG5DOo8S4W0nqCXz4NM&oh=00_AQJKN860mJe-KikH6JYDIzaMcDvrbvOqyoexKOr5Aad6EA&oe=6AB7B2AE" alt="Artista Gold Accent" loading="eager">
+                  <div class="hero-story-overlay">
+                    <span class="hero-story-badge">SPECTRUM</span>
+                    <div class="hero-story-meta">
+                      <span class="hero-story-name">Gold Spectrum</span>
+                      <span class="hero-story-desc">Luminous Micro-Sparkle</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hero-story-card">
+                  <img src="https://www.diamondpaints.com/cdn/shop/files/elegant-2-1365x2048.webp?v=1726596016" alt="Artista Cloud Spectrum" loading="eager">
+                  <div class="hero-story-overlay">
+                    <span class="hero-story-badge">CLOUD</span>
+                    <div class="hero-story-meta">
+                      <span class="hero-story-name">Cloud Spectrum</span>
+                      <span class="hero-story-desc">Atmospheric Silk Sheen</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Set B (Identical for seamless wrap) -->
+                <div class="hero-story-card">
+                  <img src="https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/808375148_18110502391938907_1889952359863348314_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=O7NxZgc1JKYQ7kNvwEcHn_J&_nc_oc=AdrvNwlaJfP9GdSn3E0J36UJzG2jgLvJyQHNULz4XidYcWTpvXJkZTGwl32-8BUXqqI&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=Esdx1e6cRkXmjZQ5SuPLLg&_nc_tpa=Q5bMBQL5Y6LnE4ZUh1GtxqxMyaEEJlBY5k18o5Lx39GnKSCCQAYFZUA03CFAWI2KNbR-fJCAreSw0o4Y&oh=00_AQILfuSo6OLIGEqYlNAxIcmB9AO80uiDfSxE8PIDeZR4pQ&oe=6AB7BE87" alt="Artista Glitz Application" loading="lazy">
+                  <div class="hero-story-overlay">
+                    <span class="hero-story-badge">GLITZ</span>
+                    <div class="hero-story-meta">
+                      <span class="hero-story-name">Metallic Sheen</span>
+                      <span class="hero-story-desc">Signature Textured Feel</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hero-story-card">
+                  <img src="https://www.diamondpaints.com/cdn/shop/files/WhatsApp-Image-2024-02-14-at-5.50.28-PM-1.webp?v=1726596016" alt="Artista Marble Finish" loading="lazy">
+                  <div class="hero-story-overlay">
+                    <span class="hero-story-badge">MARBLE</span>
+                    <div class="hero-story-meta">
+                      <span class="hero-story-name">Italian Marble</span>
+                      <span class="hero-story-desc">Architectural Venetian Depth</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hero-story-card">
+                  <img src="https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/790317928_18109930495938907_7239027504800240601_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=n2D59S0THYAQ7kNvwGjiI0q&_nc_oc=Adrsr1a2oxcqpotB4aOCMJHlYcvdr1Rgo100C6EpcRCZ_X8mtw4yyUwPWMHf81IFTzM&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=Esdx1e6cRkXmjZQ5SuPLLg&_nc_tpa=Q5bMBQL7Km0-tf5WLDV6zPzKx1qQ5w4HT1OTSs3wf74fWns_Ie82Ahf3iUvzDMG5DOo8S4W0nqCXz4NM&oh=00_AQJKN860mJe-KikH6JYDIzaMcDvrbvOqyoexKOr5Aad6EA&oe=6AB7B2AE" alt="Artista Gold Accent" loading="lazy">
+                  <div class="hero-story-overlay">
+                    <span class="hero-story-badge">SPECTRUM</span>
+                    <div class="hero-story-meta">
+                      <span class="hero-story-name">Gold Spectrum</span>
+                      <span class="hero-story-desc">Luminous Micro-Sparkle</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hero-story-card">
+                  <img src="https://www.diamondpaints.com/cdn/shop/files/elegant-2-1365x2048.webp?v=1726596016" alt="Artista Cloud Spectrum" loading="lazy">
+                  <div class="hero-story-overlay">
+                    <span class="hero-story-badge">CLOUD</span>
+                    <div class="hero-story-meta">
+                      <span class="hero-story-name">Cloud Spectrum</span>
+                      <span class="hero-story-desc">Atmospheric Silk Sheen</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 2: Moves downward smoothly, slows on hover -->
+            <div class="hero-story-col" id="heroStoryCol2" title="Hover to slow animation">
+              <div class="hero-story-track" id="heroStoryTrack2">
+                <!-- Set A -->
+                <div class="hero-story-card">
+                  <img src="https://scontent-iad3-2.cdninstagram.com/v/t51.82787-15/817719319_18109931050938907_3923190869570754259_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=dDD0UW337SkQ7kNvwHgYmjL&_nc_oc=AdpRq0Y2tRNWQiENiQnGGUirwbD8RJhARJjWORr3FWvRmvRnWhfM1bXSIQInORMcz6E&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=Esdx1e6cRkXmjZQ5SuPLLg&_nc_tpa=Q5bMBQILqucMYITzq-RV7Twpt4KaM-iUmoke0TrnL3dC4RfHy99L3ax-udcYgCEV9hZIFCXuTb4n4zR3&oh=00_AQIkfj3VaTD9sruBgjWrG5i3G7P8OERfOJ4T-15C2h8EAg&oe=6AB7C661" alt="Artista Interior Application" loading="eager">
+                  <div class="hero-story-overlay">
+                    <span class="hero-story-badge">DELICOAT</span>
+                    <div class="hero-story-meta">
+                      <span class="hero-story-name">Delicoat Finish</span>
+                      <span class="hero-story-desc">Soft Tactile Velvet</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hero-story-card">
+                  <img src="https://www.diamondpaints.com/cdn/shop/files/WhatsApp-Image-2024-02-14-at-5.50.29-PM.webp?v=1726596016" alt="Artista Classique Finish" loading="eager">
+                  <div class="hero-story-overlay">
+                    <span class="hero-story-badge">CLASSIQUE</span>
+                    <div class="hero-story-meta">
+                      <span class="hero-story-name">Classique Sand</span>
+                      <span class="hero-story-desc">Refined Mineral Grain</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hero-story-card">
+                  <img src="https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/816858644_18109929934938907_8112534108826367826_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=ryBI_oZfaVMQ7kNvwHXwbeo&_nc_oc=AdrOr8yD37MYOjt45lMFti0vRcvC_O1-2_3aa2bEOnFcaT6QSHI2dq2zSOYCPObEOzk&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=Esdx1e6cRkXmjZQ5SuPLLg&_nc_tpa=Q5bMBQL0KzSpcseLtYZsxsClV5P86bYK-vjNRYB0FJ7rTzgQTMd4C-loZa_ZYi1rLWpVYvTgNGje_kUM&oh=00_AQKY2isFQLhdBCMgv1fuhRv9TI9mkoxlxt_fOowUejpWKQ&oe=6AB7C4D3" alt="Artista Application" loading="eager">
+                  <div class="hero-story-overlay">
+                    <span class="hero-story-badge">EDITORIAL</span>
+                    <div class="hero-story-meta">
+                      <span class="hero-story-name">Studio Mastercraft</span>
+                      <span class="hero-story-desc">Handcrafted Wall Texture</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hero-story-card">
+                  <img src="https://www.diamondpaints.com/cdn/shop/files/WhatsApp-Image-2023-12-26-at-4.40.11-PM-1.webp?v=1726596016" alt="Artista Gold Grain" loading="eager">
+                  <div class="hero-story-overlay">
+                    <span class="hero-story-badge">GOLD</span>
+                    <div class="hero-story-meta">
+                      <span class="hero-story-name">Gold Spectrum</span>
+                      <span class="hero-story-desc">Subtle Warm Shimmer</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Set B (Identical for seamless wrap) -->
+                <div class="hero-story-card">
+                  <img src="https://scontent-iad3-2.cdninstagram.com/v/t51.82787-15/817719319_18109931050938907_3923190869570754259_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=dDD0UW337SkQ7kNvwHgYmjL&_nc_oc=AdpRq0Y2tRNWQiENiQnGGUirwbD8RJhARJjWORr3FWvRmvRnWhfM1bXSIQInORMcz6E&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=Esdx1e6cRkXmjZQ5SuPLLg&_nc_tpa=Q5bMBQILqucMYITzq-RV7Twpt4KaM-iUmoke0TrnL3dC4RfHy99L3ax-udcYgCEV9hZIFCXuTb4n4zR3&oh=00_AQIkfj3VaTD9sruBgjWrG5i3G7P8OERfOJ4T-15C2h8EAg&oe=6AB7C661" alt="Artista Interior Application" loading="lazy">
+                  <div class="hero-story-overlay">
+                    <span class="hero-story-badge">DELICOAT</span>
+                    <div class="hero-story-meta">
+                      <span class="hero-story-name">Delicoat Finish</span>
+                      <span class="hero-story-desc">Soft Tactile Velvet</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hero-story-card">
+                  <img src="https://www.diamondpaints.com/cdn/shop/files/WhatsApp-Image-2024-02-14-at-5.50.29-PM.webp?v=1726596016" alt="Artista Classique Finish" loading="lazy">
+                  <div class="hero-story-overlay">
+                    <span class="hero-story-badge">CLASSIQUE</span>
+                    <div class="hero-story-meta">
+                      <span class="hero-story-name">Classique Sand</span>
+                      <span class="hero-story-desc">Refined Mineral Grain</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hero-story-card">
+                  <img src="https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/816858644_18109929934938907_8112534108826367826_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=ryBI_oZfaVMQ7kNvwHXwbeo&_nc_oc=AdrOr8yD37MYOjt45lMFti0vRcvC_O1-2_3aa2bEOnFcaT6QSHI2dq2zSOYCPObEOzk&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=Esdx1e6cRkXmjZQ5SuPLLg&_nc_tpa=Q5bMBQL0KzSpcseLtYZsxsClV5P86bYK-vjNRYB0FJ7rTzgQTMd4C-loZa_ZYi1rLWpVYvTgNGje_kUM&oh=00_AQKY2isFQLhdBCMgv1fuhRv9TI9mkoxlxt_fOowUejpWKQ&oe=6AB7C4D3" alt="Artista Application" loading="lazy">
+                  <div class="hero-story-overlay">
+                    <span class="hero-story-badge">EDITORIAL</span>
+                    <div class="hero-story-meta">
+                      <span class="hero-story-name">Studio Mastercraft</span>
+                      <span class="hero-story-desc">Handcrafted Wall Texture</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hero-story-card">
+                  <img src="https://www.diamondpaints.com/cdn/shop/files/WhatsApp-Image-2023-12-26-at-4.40.11-PM-1.webp?v=1726596016" alt="Artista Gold Grain" loading="lazy">
+                  <div class="hero-story-overlay">
+                    <span class="hero-story-badge">GOLD</span>
+                    <div class="hero-story-meta">
+                      <span class="hero-story-name">Gold Spectrum</span>
+                      <span class="hero-story-desc">Subtle Warm Shimmer</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Floating Cursor Story Preview Tooltip (Magnifies active story image beside cursor) -->
+  <div class="story-cursor-preview" id="storyCursorPreview" aria-hidden="true">
+    <div class="story-preview-inner">
+      <img id="storyPreviewImg" src="" alt="Texture Preview">
+      <div class="story-preview-overlay">
+        <span class="story-preview-badge" id="storyPreviewBadge">TEXTURE</span>
+        <div class="story-preview-meta">
+          <span class="story-preview-title" id="storyPreviewTitle"></span>
+          <span class="story-preview-sub" id="storyPreviewSub"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SECTION 2: INSTAGRAM FEED SECTION (PRESERVED CONTENT)
+       ======================================================== -->
+  <section class="artista-instagram-section" id="instagramSection">
+    <div class="insta-header">
+      <h2>Follow us on Instagram</h2>
+      <p>Join our community for daily inspiration and a closer look at our creations</p>
+    </div>
+
+    <div class="insta-carousel-wrap">
+      <div class="insta-grid-stack">
+        
+    <a href="https://www.instagram.com/reel/DdiUwahgjBq/" target="_blank" rel="noopener" class="insta-post-card">
+      <div class="insta-post-media">
+        <img src="https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/808375148_18110502391938907_1889952359863348314_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=O7NxZgc1JKYQ7kNvwEcHn_J&_nc_oc=AdrvNwlaJfP9GdSn3E0J36UJzG2jgLvJyQHNULz4XidYcWTpvXJkZTGwl32-8BUXqqI&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=Esdx1e6cRkXmjZQ5SuPLLg&_nc_tpa=Q5bMBQL5Y6LnE4ZUh1GtxqxMyaEEJlBY5k18o5Lx39GnKSCCQAYFZUA03CFAWI2KNbR-fJCAreSw0o4Y&oh=00_AQILfuSo6OLIGEqYlNAxIcmB9AO80uiDfSxE8PIDeZR4pQ&oe=6AB7BE87" alt="Artista Instagram Reel" loading="lazy">
+        <div class="insta-card-overlay">
+          <span class="insta-overlay-badge">GLITZ</span>
+          <span class="insta-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </a>
+  
+
+    <a href="https://www.instagram.com/reel/Dddz_CCjfam/" target="_blank" rel="noopener" class="insta-post-card">
+      <div class="insta-post-media">
+        <img src="https://scontent-iad3-2.cdninstagram.com/v/t51.82787-15/817719319_18109931050938907_3923190869570754259_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=dDD0UW337SkQ7kNvwHgYmjL&_nc_oc=AdpRq0Y2tRNWQiENiQnGGUirwbD8RJhARJjWORr3FWvRmvRnWhfM1bXSIQInORMcz6E&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=Esdx1e6cRkXmjZQ5SuPLLg&_nc_tpa=Q5bMBQILqucMYITzq-RV7Twpt4KaM-iUmoke0TrnL3dC4RfHy99L3ax-udcYgCEV9hZIFCXuTb4n4zR3&oh=00_AQIkfj3VaTD9sruBgjWrG5i3G7P8OERfOJ4T-15C2h8EAg&oe=6AB7C661" alt="Artista Instagram Reel" loading="lazy">
+        <div class="insta-card-overlay">
+          <span class="insta-overlay-badge">GLITZ</span>
+          <span class="insta-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </a>
+  
+
+    <a href="https://www.instagram.com/reel/Dddz1wWgNEJ/" target="_blank" rel="noopener" class="insta-post-card">
+      <div class="insta-post-media">
+        <img src="https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/790317928_18109930495938907_7239027504800240601_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=n2D59S0THYAQ7kNvwGjiI0q&_nc_oc=Adrsr1a2oxcqpotB4aOCMJHlYcvdr1Rgo100C6EpcRCZ_X8mtw4yyUwPWMHf81IFTzM&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=Esdx1e6cRkXmjZQ5SuPLLg&_nc_tpa=Q5bMBQL7Km0-tf5WLDV6zPzKx1qQ5w4HT1OTSs3wf74fWns_Ie82Ahf3iUvzDMG5DOo8S4W0nqCXz4NM&oh=00_AQJKN860mJe-KikH6JYDIzaMcDvrbvOqyoexKOr5Aad6EA&oe=6AB7B2AE" alt="Artista Instagram Reel" loading="lazy">
+        <div class="insta-card-overlay">
+          <span class="insta-overlay-badge">GLITZ</span>
+          <span class="insta-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </a>
+  
+
+    <a href="https://www.instagram.com/reel/DddzpEtl5-m/" target="_blank" rel="noopener" class="insta-post-card">
+      <div class="insta-post-media">
+        <img src="https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/816858644_18109929934938907_8112534108826367826_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=ryBI_oZfaVMQ7kNvwHXwbeo&_nc_oc=AdrOr8yD37MYOjt45lMFti0vRcvC_O1-2_3aa2bEOnFcaT6QSHI2dq2zSOYCPObEOzk&_nc_zt=23&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=Esdx1e6cRkXmjZQ5SuPLLg&_nc_tpa=Q5bMBQL0KzSpcseLtYZsxsClV5P86bYK-vjNRYB0FJ7rTzgQTMd4C-loZa_ZYi1rLWpVYvTgNGje_kUM&oh=00_AQKY2isFQLhdBCMgv1fuhRv9TI9mkoxlxt_fOowUejpWKQ&oe=6AB7C4D3" alt="Artista Instagram Reel" loading="lazy">
+        <div class="insta-card-overlay">
+          <span class="insta-overlay-badge">DELICOAT</span>
+          <span class="insta-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </a>
+  
+
+    <a href="https://www.instagram.com/reel/Dda6G70lO1m/" target="_blank" rel="noopener" class="insta-post-card">
+      <div class="insta-post-media">
+        <img src="https://scontent-iad3-2.cdninstagram.com/v/t51.82787-15/813756645_18109591618938907_2804202661078428601_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=2Kd-T6n4GEoQ7kNvwG86ZWo&_nc_oc=AdrDEW3gtjWECb3_8r0_X0TIUai7uF4UTYuOwEl_g-dbJ-E4nt5wBQQFEvxgkXrwmKg&_nc_zt=23&_nc_ht=scontent-iad3-2.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=Esdx1e6cRkXmjZQ5SuPLLg&_nc_tpa=Q5bMBQIEDzrqfuViJ1On-IDjhCxmN5JzbXN2BR6MzMuL5uot4O4O11l5vQ91cEyshu92veNpmPSonCRb&oh=00_AQLHG5lti3pEiCvr1-SMiV1P9VeD_vpga7MSXKM7kW1eZw&oe=6AB795F5" alt="Artista Instagram Reel" loading="lazy">
+        <div class="insta-card-overlay">
+          <span class="insta-overlay-badge">GLITZ</span>
+          <span class="insta-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </a>
+  
+      </div>
+    </div>
+
+    <div class="insta-action">
+      <a href="https://instagram.com/artistabydiamondpaints" target="_blank" rel="noopener" class="btn-visit-instagram">
+        Visit Instagram
+      </a>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECTION 3: WHAT WOULD YOU LIKE TO DO?
+       ======================================================== -->
+  <section class="artista-actions-section" id="whatToDo">
+    <div class="lux-container">
+      <div class="actions-header">
+        <div class="lux-eyebrow">Quick Pathways</div>
+        <h2 class="lux-section-title-dark">What Would You Like to Do?</h2>
+        <p class="lux-section-desc-dark" style="margin: 0 auto;">Select an action below to explore our signature textures, locate authorized regional distributors, or download the comprehensive brochure.</p>
+      </div>
+
+      <div class="actions-grid">
+        <div class="action-card">
+          <div>
+            <span class="action-num-badge">01 / DISCOVER</span>
+            <h3 class="action-title">View Artista Texture Range</h3>
+          </div>
+          <div class="action-footer">
+            <a href="#artistaRange" class="btn-lux-outline">Artista Range</a>
+          </div>
+        </div>
+
+        <div class="action-card">
+          <div>
+            <span class="action-num-badge">02 / LOCATE</span>
+            <h3 class="action-title">Find Where to Buy Artista</h3>
+          </div>
+          <div class="action-footer">
+            <a href="#buyArtista" class="btn-lux-outline">Buy Artista</a>
+          </div>
+        </div>
+
+        <div class="action-card">
+          <div>
+            <span class="action-num-badge">03 / DOWNLOAD</span>
+            <h3 class="action-title">Download Artista Brochure</h3>
+          </div>
+          <div class="action-footer">
+            <a href="#artistaBrochure" class="btn-lux-outline">Artista Brochure</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECTION 4: OUR ARTISTA RANGE (EQUAL SIZED & CENTERED LAST 3)
+       ======================================================== -->
+  <section class="artista-range-section" id="artistaRange">
+    <div class="lux-container">
+      <div class="range-header">
+        <div class="lux-eyebrow">Signature Collection</div>
+        <h2 class="lux-section-title-dark">OUR ARTISTA RANGE</h2>
+        <p class="lux-section-desc-dark" style="margin: 0 auto;">Masterfully engineered decorative wall finishes crafted to bring depth, tactile richness, and architectural distinction to any interior space.</p>
+      </div>
+
+      <!-- Signature Collection Cards (8-Col Desktop Grid / Sticky Stacking Cards on Mobile) -->
+      <div class="range-cards-grid" id="rangeCardsGrid">
+        
+    <div class="range-card-col">
+      <a href="https://www.diamondpaints.com/pages/delicoat" class="lux-range-card">
+        <div class="card-media-wrap">
+          <img src="https://www.diamondpaints.com/cdn/shop/files/WhatsApp-Image-2024-02-14-at-5.50.29-PM-1.webp?v=1726596016" alt="Delicoat Texture Finish" loading="lazy">
+          <span class="card-badge">01 / 07 &bull; Signature</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Delicoat</h3>
+          <div class="card-spec-tags">
+            <span class="spec-tag">Low Sparkle</span>
+            <span class="spec-tag">Medium Consistency</span>
+            <span class="spec-tag">Textured Feel</span>
+          </div>
+          <div class="card-action">
+            <span>Explore Finish</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="explore-arrow"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+        </div>
+      </a>
+    </div>
+  
+
+    <div class="range-card-col">
+      <a href="https://www.diamondpaints.com/pages/marble-finish" class="lux-range-card">
+        <div class="card-media-wrap">
+          <img src="https://www.diamondpaints.com/cdn/shop/files/WhatsApp-Image-2024-02-14-at-5.50.28-PM-1.webp?v=1726596016" alt="Marble Finish Texture Finish" loading="lazy">
+          <span class="card-badge">02 / 07 &bull; Signature</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Marble Finish</h3>
+          <div class="card-spec-tags">
+            <span class="spec-tag">No Sparkle</span>
+            <span class="spec-tag">Thick Consistency</span>
+            <span class="spec-tag">Textured Feel</span>
+          </div>
+          <div class="card-action">
+            <span>Explore Finish</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="explore-arrow"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+        </div>
+      </a>
+    </div>
+  
+
+    <div class="range-card-col">
+      <a href="https://www.diamondpaints.com/pages/classique" class="lux-range-card">
+        <div class="card-media-wrap">
+          <img src="https://www.diamondpaints.com/cdn/shop/files/WhatsApp-Image-2024-02-14-at-5.50.29-PM.webp?v=1726596016" alt="Classique Texture Finish" loading="lazy">
+          <span class="card-badge">03 / 07 &bull; Signature</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Classique</h3>
+          <div class="card-spec-tags">
+            <span class="spec-tag">High Sparkle</span>
+            <span class="spec-tag">Medium Consistency</span>
+            <span class="spec-tag">Sand Feel</span>
+          </div>
+          <div class="card-action">
+            <span>Explore Finish</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="explore-arrow"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+        </div>
+      </a>
+    </div>
+  
+
+    <div class="range-card-col">
+      <a href="https://www.diamondpaints.com/pages/glitz" class="lux-range-card">
+        <div class="card-media-wrap">
+          <img src="https://www.diamondpaints.com/cdn/shop/files/WhatsApp-Image-2024-02-14-at-5.50.28-PM.webp?v=1726596016" alt="Glitz Texture Finish" loading="lazy">
+          <span class="card-badge">04 / 07 &bull; Signature</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Glitz</h3>
+          <div class="card-spec-tags">
+            <span class="spec-tag">Slight Sheen</span>
+            <span class="spec-tag">Thick Consistency</span>
+            <span class="spec-tag">Textured Feel</span>
+          </div>
+          <div class="card-action">
+            <span>Explore Finish</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="explore-arrow"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+        </div>
+      </a>
+    </div>
+        
+    <div class="range-card-col">
+      <a href="https://www.diamondpaints.com/pages/gold-spectrum" class="lux-range-card">
+        <div class="card-media-wrap">
+          <img src="https://www.diamondpaints.com/cdn/shop/files/WhatsApp-Image-2023-12-26-at-4.40.11-PM-1.webp?v=1726596016" alt="Gold Spectrum Texture Finish" loading="lazy">
+          <span class="card-badge">05 / 07 &bull; Signature</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Gold Spectrum</h3>
+          <div class="card-spec-tags">
+            <span class="spec-tag">High Sparkle</span>
+            <span class="spec-tag">Thin Consistency</span>
+            <span class="spec-tag">Sand Feel</span>
+          </div>
+          <div class="card-action">
+            <span>Explore Finish</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="explore-arrow"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+        </div>
+      </a>
+    </div>
+  
+
+    <div class="range-card-col">
+      <a href="https://www.diamondpaints.com/pages/silver-spectrum" class="lux-range-card">
+        <div class="card-media-wrap">
+          <img src="https://www.diamondpaints.com/cdn/shop/files/WhatsApp-Image-2023-12-26-at-4.40.14-PM.webp?v=1726596016" alt="Silver Spectrum Texture Finish" loading="lazy">
+          <span class="card-badge">06 / 07 &bull; Signature</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Silver Spectrum</h3>
+          <div class="card-spec-tags">
+            <span class="spec-tag">High Sparkle</span>
+            <span class="spec-tag">Thin Consistency</span>
+            <span class="spec-tag">Sand Feel</span>
+          </div>
+          <div class="card-action">
+            <span>Explore Finish</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="explore-arrow"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+        </div>
+      </a>
+    </div>
+  
+
+    <div class="range-card-col">
+      <a href="https://www.diamondpaints.com/pages/cloud-spectrum" class="lux-range-card">
+        <div class="card-media-wrap">
+          <img src="https://www.diamondpaints.com/cdn/shop/files/elegant-2-1365x2048.webp?v=1726596016" alt="Cloud Spectrum Texture Finish" loading="lazy">
+          <span class="card-badge">07 / 07 &bull; Signature</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Cloud Spectrum</h3>
+          <div class="card-spec-tags">
+            <span class="spec-tag">Visible Sheen</span>
+            <span class="spec-tag">Medium Consistency</span>
+            <span class="spec-tag">Textured Feel</span>
+          </div>
+          <div class="card-action">
+            <span>Explore Finish</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="explore-arrow"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+        </div>
+      </a>
+    </div>
+  
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECTION 5: ECO-CONSCIOUS SCIENCE (ULTRA-SMOOTH VELOCITY TICKER)
+       ======================================================== -->
+  <section class="artista-eco-section">
+    <div class="lux-container eco-intro-block">
+      <div class="lux-eyebrow">Eco-Conscious Science</div>
+      <h2>Inspired by nature for nature</h2>
+      <p>The paint is uniquely formulated inhouse with</p>
+    </div>
+
+    <div class="marquee-viewport" id="marqueeViewport">
+      <div class="marquee-track" id="marqueeTrack">
+        <!-- 2 identical sets for seamless continuous wrap-around -->
+        
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Low VOC Formulation</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">100% Water Based</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Mercury Free</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Zero Lead Content</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Chrome Free Chemistry</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Heavy Metals Free</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Odorless Curing</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Eco-Friendly Certified</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Low VOC Formulation</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">100% Water Based</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Mercury Free</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Zero Lead Content</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Chrome Free Chemistry</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Heavy Metals Free</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Odorless Curing</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Eco-Friendly Certified</span>
+  </div>
+
+        
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Low VOC Formulation</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">100% Water Based</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Mercury Free</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Zero Lead Content</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Chrome Free Chemistry</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Heavy Metals Free</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Odorless Curing</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Eco-Friendly Certified</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Low VOC Formulation</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">100% Water Based</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Mercury Free</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Zero Lead Content</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Chrome Free Chemistry</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Heavy Metals Free</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Odorless Curing</span>
+  </div>
+
+
+  <div class="marquee-item">
+    <span class="marquee-diamond"></span>
+    <span class="marquee-text">Eco-Friendly Certified</span>
+  </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       NEW SECTION: SIGNATURE GALLON & PACKAGING SHOWCASE
+       ======================================================== -->
+  
+  <!-- ========================================================
+       SECTION: THE MASTER FORMULATION (SCROLL-DRIVEN PINNED PRODUCT & USPs)
+       ======================================================== -->
+  <section class="master-formulation-track" id="masterFormulationTrack">
+    <div class="master-sticky-stage" id="masterStickyStage">
+      <!-- Section Header -->
+      <div class="formulation-header">
+        <div class="lux-eyebrow">The Master Formulation</div>
+        <h2 class="formulation-title">Precision Crafted for Distinction</h2>
+        <div class="scroll-instruction" id="scrollInstruction">
+          <span>Scroll to explore product specifications</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <polyline points="19 12 12 19 5 12"></polyline>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Center Showcase Arena -->
+      <div class="formulation-arena">
+        <!-- Left Column USPs (01 & 03) -->
+        <div class="usp-column usp-col-left">
+          <!-- USP 1 -->
+          <div class="usp-card" id="uspCard1">
+            <div class="usp-num-pill">USP 01 / PACKAGING</div>
+            <h3 class="usp-heading">Available in 1Ltr Packing</h3>
+            <p class="usp-desc">Specially crafted metallic finish gallon preserves formula viscosity, prevents aeration, and protects texture integrity.</p>
+            <div class="usp-feature-tag">
+              <span class="usp-dot"></span>
+              <span>Signature 1 Liter Canister</span>
+            </div>
+          </div>
+
+          <!-- USP 3 -->
+          <div class="usp-card" id="uspCard3">
+            <div class="usp-num-pill">USP 03 / APPLICATION</div>
+            <h3 class="usp-heading">Multi-Tool Versatility</h3>
+            <p class="usp-desc">Formulated to respond effortlessly to brush, roller, trowel, and scraper for unique custom texture depth.</p>
+            <div class="usp-feature-tag">
+              <span class="usp-dot"></span>
+              <span>Brush, Roller, Trowel & Scraper</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Center Product Hero Image -->
+        <div class="product-center-pod" id="productCenterPod">
+          <img src="https://www.diamondpaints.com/cdn/shop/files/Artista_luxurious_paint_effect.webp?v=1770964471" alt="Diamond Paints Artista Gallon" class="pod-product-img" id="podProductImg">
+          </div>
+
+        <!-- Right Column USPs (02 & 04) -->
+        <div class="usp-column usp-col-right">
+          <!-- USP 2 -->
+          <div class="usp-card" id="uspCard2">
+            <div class="usp-num-pill">USP 02 / PURITY</div>
+            <h3 class="usp-heading">Eco-Friendly & Safe</h3>
+            <p class="usp-desc">100% Water-based and low VOC. Certified free of lead, mercury, chrome, and harmful heavy metals for healthy luxury living.</p>
+            <div class="usp-feature-tag">
+              <span class="usp-dot"></span>
+              <span>Zero Lead • Non-Toxic Grade</span>
+            </div>
+          </div>
+
+          <!-- USP 4 -->
+          <div class="usp-card" id="uspCard4">
+            <div class="usp-num-pill">USP 04 / DURABILITY</div>
+            <h3 class="usp-heading">Durable & Long-Lasting</h3>
+            <p class="usp-desc">Engineered for high-end interior resilience. Resists fading, delivers washable longevity, and protects luxury feature walls.</p>
+            <div class="usp-feature-tag">
+              <span class="usp-dot"></span>
+              <span>High-Resilience Interior Finish</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scrolly Progress Indicators & CTA -->
+      <div class="formulation-footer-bar">
+        <div class="formulation-cta" id="formulationCta">
+          <a href="#buyArtista" class="btn-lux-primary">Find Authorized Dealers</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       SECTION 6: HOW TO BUY ARTISTA (DEALER LOCATOR)
+       ======================================================== -->
+  <section class="artista-dealers-section" id="buyArtista">
+    <div class="dealers-container">
+      <div class="dealers-header">
+        <div class="lux-eyebrow">Authorized Network</div>
+        <h2 class="lux-section-title-dark">How to Buy Artista</h2>
+        <p class="lux-section-desc-dark" style="margin: 0 auto;">Artista textures are available through select distributors and texture specialists across Pakistan.</p>
+      </div>
+
+      <div class="selector-box">
+        <label class="selector-label" for="dealers-selector">Select City *</label>
+        <div class="custom-select-wrapper">
+          <select id="dealers-selector">
+            <option>Select the City</option>
+        
+          <option value="Islamabad">Islamabad</option>
+        
+          <option value="Lahore">Lahore</option>
+        
+          <option value="Sheikhupura">Sheikhupura</option>
+        
+          <option value="Karachi">Karachi</option>
+        
+          <option value="Gujranwala">Gujranwala</option>
+        
+          <option value="Kharian">Kharian</option>
+        
+          <option value="Burewala">Burewala</option>
+        
+          <option value="Dhallay Wali">Dhallay Wali</option>
+        
+          <option value="Bahawalpur">Bahawalpur</option>
+        
+          <option value="Daska">Daska</option>
+        
+          <option value="Ghakkar">Ghakkar</option>
+        
+          <option value="Sargodha">Sargodha</option>
+        
+          <option value="Rawalpindi">Rawalpindi</option>
+        
+          <option value="Mardan">Mardan</option>
+        
+          <option value="Faisalabad">Faisalabad</option>
+        
+          <option value="Multan">Multan</option>
+        
+          <option value="Sialkot">Sialkot</option>
+        
+          <option value="Swabi">Swabi</option>
+        
+          <option value="Chitral">Chitral</option>
+        
+          <option value="Peshawar">Peshawar</option>
+        
+          <option value="Hyderabad">Hyderabad</option>
+        
+          <option value="Quetta">Quetta</option>
+        
+          <option value="Haripur">Haripur</option>
+        
+          <option value="Wah Cantt">Wah Cantt</option>
+        
+          <option value="Khanewal">Khanewal</option>
+        
+          <option value="Taxila">Taxila</option>
+        
+          <option value="Dadial(A.J.K)">Dadial(A.J.K)</option>
+        
+          <option value="Rahim Yar Khan">Rahim Yar Khan</option>
+        
+          <option value="Bahawalnagar">Bahawalnagar</option>
+        
+          <option value="Parrianwali">Parrianwali</option>
+        
+          <option value="Sahiwal">Sahiwal</option>
+        
+          <option value="Gilgit">Gilgit</option>
+        
+          <option value="Okara">Okara</option>
+        
+          <option value="Manawala">Manawala</option>
+        
+          <option value="Chakwal">Chakwal</option>
+        
+          <option value="Batkhela">Batkhela</option>
+        
+          <option value="Pakpattan">Pakpattan</option>
+        
+          <option value="Gojra">Gojra</option>
+        
+          <option value="Jhang">Jhang</option>
+        
+          <option value="Talagang">Talagang</option>
+        
+          <option value="Jhelum">Jhelum</option>
+          </select>
+          <span class="select-arrow"></span>
+        </div>
+      </div>
+
+      <div class="dealers-accordions">
+        <div class="accordion" data-city="Islamabad" style="display:none;" >
+              <div class="accordion-header">
+                A.A Company
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/GRwNzswJReWNUf8D8?g_st=awb">Nazik Plaza Main G.T Road Opposite DHA Phase - II</a>
+                <a href="tel:923215193986">+923215193986</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                A.N Awan Paint House
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/7cZX4Uez4cGLFctp7?g_st=awb">264-Y Commercial, D.H.A</a>
+                <a href="tel:923008054005">+923008054005</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Sheikhupura" style="display:none;" >
+              <div class="accordion-header">
+                Afaq Paint Hardware Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/3UEQ1uAZ6BckNZU69">Lahore Road Opp. Housing Colony</a>
+                <a href="tel:923008012107">+923008012107</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                Ahmad Paint House
+              </div>
+              <div class="accordion-content">
+                <a href="https://share.google/gfn5IVzNoBiCoDIHV">126- B, Lahore, 53720, Pakistan</a>
+                <a href="tel:+92 301 4114824">++92 301 4114824</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Karachi" style="display:none;" >
+              <div class="accordion-header">
+                AJ Paints(Jamal Contractor)
+              </div>
+              <div class="accordion-content">
+                <a href="https://www.google.com/maps/search/AJ%20Paints/@24.88605885,67.0790947,17z?hl=en">Shop#1 Al-madinah arcade  
+Plot no 185 block 7 & 8 c.p & berar society , dohraji colony khi -74800</a>
+                <a href="tel:+92 333 2254772">++92 333 2254772</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Gujranwala" style="display:none;" >
+              <div class="accordion-header">
+                Al falah Traders 
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/qWeue23umssmh5SE6">DC colony shop no LG 11 basement commercial plaza DC colony Rahwali</a>
+                <a href="tel:03067466675">+03067466675</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Karachi" style="display:none;" >
+              <div class="accordion-header">
+                Al-Gilani Hardware & Paint Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://yandex.com/maps/10615/karachi/?ll=67.058745%2C24.871563&mode=routes&rtext=~24.871431%2C67.059081&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D67408166130&z=18.75">Shop No. 495-C Commercial Area Tariq Road
+</a>
+                <a href="tel:923333460060">+923333460060</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Karachi" style="display:none;" >
+              <div class="accordion-header">
+                Al-Jannat Paint House
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/QoVMcBBso8MqD6eVA">R2CW+3W4 Defence Housing Authority, Karachi, Pakistan</a>
+                <a href="tel:0333 3587244">+0333 3587244</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                AL MADINA
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/W14CZoYY3bLSsDwi9">H.No.177-A, Muhalla Madina Block, Awan Town</a>
+                <a href="tel:923014468710">+923014468710</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Kharian" style="display:none;" >
+              <div class="accordion-header">
+                Al- Meezan Color Bank & Paint Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/H6po1RAoRbuqgoXL7">Marala Plaza Dinga Road</a>
+                <a href="tel:923005429207">+923005429207</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Burewala" style="display:none;" >
+              <div class="accordion-header">
+                Rang Mahal Enterprises
+              </div>
+              <div class="accordion-content">
+                <a href="https://goo.gl/maps/sGXRyfTJ5msLraTA9">Gool Chok burewala </a>
+                <a href="tel:03007596650">+03007596650</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Dhallay Wali" style="display:none;" >
+              <div class="accordion-header">
+                Al Watni Paint House
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/L8f8irSmHbJM9G6A8">Near ABL, Dhallay Wali Head Marala</a>
+                <a href="tel:923401215680">+923401215680</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Bahawalpur" style="display:none;" >
+              <div class="accordion-header">
+                Amin brother paint store Bahawalpur
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/Wz1mQgQuBFvYzbTU7">9PJ8+WH3, Baghdad Road Hussaini Chowk Hamaytian, 63100, Pakistan</a>
+                <a href="tel:03007803310">+03007803310</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Bahawalpur" style="display:none;" >
+              <div class="accordion-header">
+                Amin paint store shop 2
+              </div>
+              <div class="accordion-content">
+                <a href="https://www.google.com/maps?q=29.4061325,71.7033895&z=17&hl=en">Jhangi wala road near allama iqbal town  bahawalpur</a>
+                <a href="tel:+92 300 7807745">++92 300 7807745</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                Anwar Paint House
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/zGXVGCdhZjGCzCZr8">Yousaf Park Shadrah</a>
+                <a href="tel:923004307725">+923004307725</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                Aqeel Paint House
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/SP7qFHJcry334FXL7">Jamu Stop Bedian Road
+Lahore, Punjab</a>
+                <a href="tel: 0322 4663245">+ 0322 4663245</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Bahawalpur" style="display:none;" >
+              <div class="accordion-header">
+                Arif paint house 
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/KFzR5cFnQoMhkDS28">Eid gha,multan  road bahawalpur </a>
+                <a href="tel:03026500070">+03026500070</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Karachi" style="display:none;" >
+              <div class="accordion-header">
+                Arsalan Paint House
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/hh4GjkpHmMgSE12w8">Shop No. A-3, Kahkeshan Homes, Gulzar-e-Hijri</a>
+                <a href="tel:923314647454">+923314647454</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Daska" style="display:none;" >
+              <div class="accordion-header">
+                Arshad Paint Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://goo.gl/maps/7fsjsHki6Angfzob9">Nisbat Road</a>
+                <a href="tel:923016486501">+923016486501</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Karachi" style="display:none;" >
+              <div class="accordion-header">
+                Askari Colour Bank & Sanitary Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/hvmXjMq4NuMQeMWeA">Shop # 6-6/A, Hussaini Sifarat Khana, Saudabad, Malir</a>
+                <a href="tel:923458282890">+923458282890</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Ghakkar" style="display:none;" >
+              <div class="accordion-header">
+                Awais Paint
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/EJMyUjUY6RHMaeFi8">74XX+QRR Ghakhar, Pakistan</a>
+                <a href="tel:0300-8133608">+0300-8133608</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                Babar Paint Palace
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/DKBwzRqZ5cPcYPeS8">1/1 Iqbal Avenue, Phase-3,  Canal Bank Road</a>
+                <a href="tel:923215294038">+923215294038</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Sargodha" style="display:none;" >
+              <div class="accordion-header">
+                Baiga Paints & Hardware Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/h7m528WX9Yurehz3A">Near General Bus Stand Lahore Road</a>
+                <a href="tel:0300-6001906">+0300-6001906</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Rawalpindi" style="display:none;" >
+              <div class="accordion-header">
+                Bari Paint Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/hQGoByM4zT3L9cPR6">dhamial road</a>
+                <a href="tel:03005346498">+03005346498</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Islamabad" style="display:none;" >
+              <div class="accordion-header">
+                Best Choice centre Paint & Hardware Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Shop%20No.%201-2%20Commercial%20Area%20Sector-E%20DHA-1%20%20Islamabad%2C%20Punjab">Shop No. 1-2 Commercial Area Sector-E DHA-1</a>
+                <a href="tel:3455450634">+3455450634</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Mardan" style="display:none;" >
+              <div class="accordion-header">
+                Colour World
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/F9vDWizBfDzDim8v6">Nawi kali raod, sector, opposite to, ?????, 23200, PK</a>
+                <a href="tel:03145434000">+03145434000</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Faisalabad" style="display:none;" >
+              <div class="accordion-header">
+                China paints store
+              </div>
+              <div class="accordion-content">
+                <a href="https://www.google.com/maps/place/Diamond+paints+Authorised+Dealer+(China+paints+store)/@31.4599673,73.0820741,17z/data=!3m1!4b1!4m6!3m5!1s0x392243ef92ba1059:0x2618f65ad625de06!8m2!3d31.4599673!4d73.0820741!16s%2Fg%2F11lmf_8zdn?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D">Main Sargodha Rd, near ideal bakery, Muslim Town B-Block Block A Muslim Town, Faisalabad, 38000, Pakistan</a>
+                <a href="tel: +92 300 9653989">+ +92 300 9653989</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Multan" style="display:none;" >
+              <div class="accordion-header">
+                Diamond Color Center
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/n979eNdHe8eNzJE49">Shop # 2, Musa Center, Opposite Wapda Town</a>
+                <a href="tel:03007368500">+03007368500</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Islamabad" style="display:none;" >
+              <div class="accordion-header">
+                Ehsan Paint & Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/ggiTEjNrirTcid1b6">J2VJ+MMX Islamabad</a>
+                <a href="tel:+92 335 5211559">++92 335 5211559</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Sialkot" style="display:none;" >
+              <div class="accordion-header">
+                Fakhar Paint
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/mc49tpnuR7ceX17M8">Adda Shahbaz Khan</a>
+                <a href="tel:923045531207">+923045531207</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Faisalabad" style="display:none;" >
+              <div class="accordion-header">
+                Farooq paint 
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/x715hBewqCnjkJLaA">millat chownk near ideal bakery millat road faisalabad.</a>
+                <a href="tel: 0346 7798153">+ 0346 7798153</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Swabi" style="display:none;" >
+              <div class="accordion-header">
+                Fauji Paint, Senatory & Tile House
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/eEWnyGnYSpNEJXrU7">Adda Distt, Shewa Road Shewa, Swabi, 23420</a>
+                <a href="tel:03338885584">+03338885584</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                G.S Paints
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/Gi5KFM7oYDKYZsY98">233 B Tulip Ext. Commercial Sector C, Bahria Town</a>
+                <a href="tel:923006999555">+923006999555</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                Ghousia Paint
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/VKpxkHhNT2QtJ1tr6">22 Multan Rd, Chung, Lahore, 53000, Pakistan</a>
+                <a href="tel:03244032658">+03244032658</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Multan" style="display:none;" >
+              <div class="accordion-header">
+                Gulzar Paint House
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/E7gA5JSFg1HCQkNG8">Tubewel Workshop MDA Multan
+</a>
+                <a href="tel:03028738974">+03028738974</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Chitral" style="display:none;" >
+              <div class="accordion-header">
+                Hafeez Paint
+              </div>
+              <div class="accordion-content">
+                <a href="https://www.google.com/maps/place/Hafeez+Paints/@35.843957,71.7829272,754m/data=!3m2!1e3!4b1!4m6!3m5!1s0x38db53006eb811b7:0xd8a50ef8b977d7cf!8m2!3d35.843957!4d71.7829272!16s%2Fg%2F11ysb10j6r?entry=ttu&g_ep=EgoyMDI2MDQxMi4wIKXMDSoASAFQAw%3D%3D">RQVM+H5M, Sabzi mandi road, Chitral, Pakistan</a>
+                <a href="tel:0333 9503788">+0333 9503788</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                Haidery Paint House
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/A22wARq5qYoV9oqZ9">
+13,Km main Multan road near orange line station Thoker Niaz baig Lahore
+</a>
+                <a href="tel: 03227178026">+ 03227178026</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                Haji & Sons Paint & Hardware Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/ABXXpeD7he23qbCu7">Bandianwala Pull Chungi Amarsidhu</a>
+                <a href="tel:923004006073">+923004006073</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Islamabad" style="display:none;" >
+              <div class="accordion-header">
+                Hamza Traders
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/tUdHB62UTurBuvWc8">Peshawar Road</a>
+                <a href="tel:923005551837">+923005551837</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Sialkot" style="display:none;" >
+              <div class="accordion-header">
+                Haseeb Paint House
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/CoZuztZiiYUn5sjb8">Kashmir Road</a>
+                <a href="tel:923316323207">+923316323207</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Rawalpindi" style="display:none;" >
+              <div class="accordion-header">
+                Hassan Traders
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/5q2AvquH2pKFDWaL8">Shop B # 8, Chour Chowk Peshawar Road, Rawalpindi</a>
+                <a href="tel:03455075575">+03455075575</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Islamabad" style="display:none;" >
+              <div class="accordion-header">
+                Hussain Traders and Co.
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/U3NwABnHsfczeGx87">Shop# 3-4, Main Service Road, Opp. Street# 22</a>
+                <a href="tel:923215253076">+923215253076</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Islamabad" style="display:none;" >
+              <div class="accordion-header">
+                New Hussain Traders Paint & Hardware
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/yuH87x8oQ3rDJ1gg7">Shop # 4, Umer Trade Center, Main Fateh Jhung Road Tarnol, Islamabad</a>
+                <a href="tel:03015445644">+03015445644</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Karachi" style="display:none;" >
+              <div class="accordion-header">
+                Iqbal Paint
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/DZ6CTCTGpu3X1Ye69">Shop No. 1, Lucky Center, Gulshan-e-Iqbal</a>
+                <a href="tel:923218266707">+923218266707</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                Ittefaq paint Epoxy traders & Diamond Paints
+              </div>
+              <div class="accordion-content">
+                <a href="https://www.google.com/maps/place/Ittefaq+paint+Epoxy+traders+%26+Diamond+Paints/@31.3622472,74.2339996,17z/data=!3m1!4b1!4m6!3m5!1s0x3919ab0025f9ceeb:0xdaf416dc2511aeda!8m2!3d31.3622472!4d74.2339996!16s%2Fg%2F11vymzyz3k!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDgwNC4wIKXMDSoASAFQAw%3D%3D">966M+VJF ADDA PLOT, Chanar Courts, Raiwind, 53700, Pakistan</a>
+                <a href="tel:+923157225258">++923157225258</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                Ittefaq Paint (Walton rd)
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/oxsC1s6hj3TaAUFeA">Korray Stop, Walton Rd, Zaman Colony, Lahore, 05450, Pakistan</a>
+                <a href="tel:03214697626">+03214697626</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Karachi" style="display:none;" >
+              <div class="accordion-header">
+                Jami Paint House
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/WJfuJvKk4GbizpBG6">10th Commercial Street Phase-4 D.H.A</a>
+                <a href="tel:923093616027">+923093616027</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Karachi" style="display:none;" >
+              <div class="accordion-header">
+                Junaid Traders
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/NsByMyZ3uoBtDwZm7">Shop no. 5, WSA-25, Block 14, F.B. Area
+</a>
+                <a href="tel:923219205153">+923219205153</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                Kamal Paint Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://www.google.com/maps?q=31.56671714782715,74.40494537353516&z=17&hl=en">Near kamal shinwari Dera, Fateh e garh. Canal road Lahore.</a>
+                <a href="tel:0321 9411542">+0321 9411542</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Peshawar" style="display:none;" >
+              <div class="accordion-header">
+                KHAKSAR Paints Peshawar 
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/GRfCedB62tbwEVeP6"> ????? ??? ?????? ??? ????? ???</a>
+                <a href="tel:03129112913">+03129112913</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Peshawar" style="display:none;" >
+              <div class="accordion-header">
+                Khalil Paint Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/5McKgwZBQmiikiEs9">XG63+2M4 Peshawar, Pakistan</a>
+                <a href="tel:+923106017736">++923106017736</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Rawalpindi" style="display:none;" >
+              <div class="accordion-header">
+                Khan Paint
+              </div>
+              <div class="accordion-content">
+                <a href="https://share.google/tv1y8SXmZqI8T0Tz0">Qurashi nan center groti stop, Dhok Syedan Road, Street No. 14, Rawalpindi, 46000, Pakistan</a>
+                <a href="tel:03155666564">+03155666564</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Sargodha" style="display:none;" >
+              <div class="accordion-header">
+                Khursheed Traders Hardware and Paint Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/54LPN3tcPYdprHQV8">Corner Nazeer Coloney Kot Fareed Road Notaa Wali Sarkar</a>
+                <a href="tel:03016724254">+03016724254</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Karachi" style="display:none;" >
+              <div class="accordion-header">
+                Lahore Trading Company
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/FxVhQPEeWPaWyM4D7">Precinct 27 Bahria Town, Karachi</a>
+                <a href="tel:0300 5334966">+0300 5334966</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                Lasani Paint
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/STHgosNv66RYUo6bA">Ghazi Road, Opp. Miraj floor Mill</a>
+                <a href="tel:923334418856">+923334418856</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Hyderabad" style="display:none;" >
+              <div class="accordion-header">
+                M.H.Traders
+              </div>
+              <div class="accordion-content">
+                <a href="https://goo.gl/maps/Ue8wnmJjxefguojn8">Plot # 10 Block D, Commercial Area Unit # 6 Latifabad</a>
+                <a href="tel:923332603223">+923332603223</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Quetta" style="display:none;" >
+              <div class="accordion-header">
+                M.Saleem & Co
+              </div>
+              <div class="accordion-content">
+                <a href="https://goo.gl/maps/pD1BX3fMDnUDJvQZ8">Mechongi Road</a>
+                <a href="tel:923058000012">+923058000012</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Haripur" style="display:none;" >
+              <div class="accordion-header">
+                Maashallah Paint Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://www.google.com/maps/place/33%C2%B059'44.0%22N+72%C2%B056'08.8%22E/@33.9955677,72.93321,17z/data=!3m1!4b1!4m4!3m3!8m2!3d33.9955677!4d72.9357849?hl=en&entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D">Near Pilot School aftab Plaza Circular Road, Haripur</a>
+                <a href="tel:03345043382">+03345043382</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Wah Cantt" style="display:none;" >
+              <div class="accordion-header">
+                Madina Electric and Paint Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/R9oukymArTpGjzDu6">Main Gt Road bahtar more, Wah Cantt, 47000, Pakistan</a>
+                <a href="tel:03089033578">+03089033578</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Khanewal" style="display:none;" >
+              <div class="accordion-header">
+                Madina Paint
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/LXcotJ92grL6BgeH6">Near Karachi Darbar</a>
+                <a href="tel:3006893082">+3006893082</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Karachi" style="display:none;" >
+              <div class="accordion-header">
+                Madina Paint House
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/ADn8EhYsLG46Tgsj8">SB-35, Arif Center, Block 7, Gulistan-e-Johar, Safoora Chowk
+</a>
+                <a href="tel:03218225676">+03218225676</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Karachi" style="display:none;" >
+              <div class="accordion-header">
+                Madina Paint Harware Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/dYg6KwPN9rkhRBbC6">Wsa 17/16, Waterpump Market, Federal B Area Block 16 Gulberg Town, Karachi, 75300, Pakistan</a>
+                <a href="tel:03332079770">+03332079770</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Taxila" style="display:none;" >
+              <div class="accordion-header">
+                Madina Paints & Supplies LLP
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/nq5oJtvshLQL6dGh6">Faisal Shaheed Road</a>
+                <a href="tel:0321-5216381">+0321-5216381</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Karachi" style="display:none;" >
+              <div class="accordion-header">
+                Maryam Paint House
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/zHMyFq3evgAUAy8w8?g_st=awb">Bohra Pir</a>
+                <a href="tel:923000935453">+923000935453</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                Majid Paint House
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/SsagGhFdG1CZNrPC9">222, Ferozpur Road Opp. Jamia Ashrafia</a>
+                <a href="tel:923224002241">+923224002241</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Sialkot" style="display:none;" >
+              <div class="accordion-header">
+                Makkah Paint House
+              </div>
+              <div class="accordion-content">
+                <a href="https://goo.gl/maps/f2YGPNZCMXKbCzNZ6">Head Marala Road Gohad Pur</a>
+                <a href="tel:923007175470">+923007175470</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                MASHALLAH PAINT HOUSE (Hanjarwal)
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/jHWV5xM1GpdxtLcCA">Opposite Zainbia Hospital, Near Mansoora, Multan Road</a>
+                <a href="tel:923224362421">+923224362421</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Dadial(A.J.K)" style="display:none;" >
+              <div class="accordion-header">
+                Mashallah Paint Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://goo.gl/maps/xWkMFHftKN7ULeX56">Kacheri Road, Tariq Market</a>
+                <a href="tel:923445919027">+923445919027</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                MASHALLAH PAINT STORE (Bahria Town)
+              </div>
+              <div class="accordion-content">
+                <a href="https://www.google.com/maps?q=31.3749581,74.1876295&z=17&hl=en">192-B, Sector C, Commercial Bahria Town</a>
+                <a href="tel:03004185654">+03004185654</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                MASHALLAH PAINT (College rd)
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/SsagGhFdG1CZNrPC9">121/1B1 Khokhar Chowk near Al jannat marriage Hall</a>
+                <a href="tel:03204122600">+03204122600</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                Mian Brothers S A Paint House 
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/gaLLNaJCcfdA7fzC6">HCFM+99H, Jehangir Rd, Harbanspura, Lahore, Pakistan</a>
+                <a href="tel:03214351299">+03214351299</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Rahim Yar Khan" style="display:none;" >
+              <div class="accordion-header">
+                Mian Color CENTRE
+              </div>
+              <div class="accordion-content">
+                <a href="https://www.google.com/maps/place/Mian+Color+CENTRE/@28.4288808,70.3281183,17z/data=!3m1!4b1!4m6!3m5!1s0x39375be4e90928af:0x363b56fdd62b05ee!8m2!3d28.4288808!4d70.3281183!16s%2Fg%2F12mkzjk98!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D">Khanpur Rd, Adda Iqbal Nagar Gulshan-e-Iqbal, Rahim Yar Khan, 64200, Pakistan</a>
+                <a href="tel:03336379371">+03336379371</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Faisalabad" style="display:none;" >
+              <div class="accordion-header">
+                Mian Traders & Paint Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/8WyeeqcadRKDJHy66">94W7+HCX Faisalabad</a>
+                <a href="tel:03347377772">+03347377772</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Bahawalnagar" style="display:none;" >
+              <div class="accordion-header">
+                Mirza akram paint store
+              </div>
+              <div class="accordion-content">
+                <a href="https://www.google.com/maps/place/30%C2%B000'03.3%22N+73%C2%B015'20.5%22E/@30.005575,73.230689,13.96z/data=!4m4!3m3!8m2!3d30.000925!4d73.2556802?hl=en&entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D">Eid gah road bahawal nagar</a>
+                <a href="tel:03007924710">+03007924710</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Karachi" style="display:none;" >
+              <div class="accordion-header">
+                MJS Interiors
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/i7FyV9LTasDW1p6q7">7-C, 28th Street, Tauheed Commercial DHA Phase-5</a>
+                <a href="tel:923332290683">+923332290683</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                Moughal Brothers Paint & Hardware Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.google.com/?q=31.552219,74.313911">162-Main Bazar Fateh Sher Road Mozang</a>
+                <a href="tel:923214699998">+923214699998</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Parrianwali" style="display:none;" >
+              <div class="accordion-header">
+                Moughal Paint & Hardware Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://goo.gl/maps/3mSmG6HA8LkHNSXTA">Jokalian Road</a>
+                <a href="tel:923007556336">+923007556336</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Sahiwal" style="display:none;" >
+              <div class="accordion-header">
+                Mukhtar Paint House
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/WQT6i7Htjxm4qpoH8">Madina Auto Market, Tufail Shaheed Road</a>
+                <a href="tel:923336911292">+923336911292</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Gilgit" style="display:none;" >
+              <div class="accordion-header">
+                Mumtaz Paint Point
+              </div>
+              <div class="accordion-content">
+                <a href="https://goo.gl/maps/m66ExMZTC5BeHHQK9">Airport Road</a>
+                <a href="tel:923465455360">+923465455360</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Rawalpindi" style="display:none;" >
+              <div class="accordion-header">
+                Musa Sons
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/s4DFHDZAcg7bvibP8">Adam Jee Road, opp. Shala Market Sadar</a>
+                <a href="tel:03005319283">+03005319283</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Gujranwala" style="display:none;" >
+              <div class="accordion-header">
+                Shani Paint
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/7YiMvF8PRmP3EkT4A">Sethi Plaza</a>
+                <a href="tel:923009648940">+923009648940</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Okara" style="display:none;" >
+              <div class="accordion-header">
+                Naveed Paint House 
+              </div>
+              <div class="accordion-content">
+                <a href="">Shop # 77 Near Taxi Stand</a>
+                <a href="tel:923016060080">+923016060080</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                NAZIR PAINT HOUSE
+              </div>
+              <div class="accordion-content">
+                <a href="https://www.google.com/maps/dir//Diamond+Paints+-+Nazir+Ahmad+Paint,+Shahkam+Chowk%D8%8C+Defence+Rd,+Block+B+Mohlanwal,+Lahore,+54810,+Pakistan%E2%80%AD/@31.4829403,74.3343893,11z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x3918ffb4f27f2adb:0x25929394808ac505!2m2!1d74.1697422!2d31.4006929?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D">Shahkam Chowk, Defence Rd, Block B Mohlanwal, Lahore, 54810, Pakistan</a>
+                <a href="tel:923004196239">+923004196239</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Faisalabad" style="display:none;" >
+              <div class="accordion-header">
+                New Mujhahid Paints
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/X6BMzE8uV3prMVyA8">Chenone road D ground faisalabad</a>
+                <a href="tel:0301 8559392">+0301 8559392</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Manawala" style="display:none;" >
+              <div class="accordion-header">
+                New Sitara Paint
+              </div>
+              <div class="accordion-content">
+                <a href="https://www.google.com/maps/place/Diamond+Paints+-+New+Sitara+Paint/data=!4m2!3m1!1s0x0:0x8b4f5966d838cf22?sa=X&ved=1t:2428&ictx=111">Main Sheikhpura road, near Qamar Garden, Faisalabad, Pakistan</a>
+                <a href="tel:+92 300 8067452">++92 300 8067452</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Sialkot" style="display:none;" >
+              <div class="accordion-header">
+                New Usman Paints
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/egP38ZLuLEHmkSX68">Defence Road</a>
+                <a href="tel:923006153076">+923006153076</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Chakwal" style="display:none;" >
+              <div class="accordion-header">
+                New Variety Paint
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/mEpenPKi9FGhutGt6">Talagang Hwy, opposite D. Watson, Chakwal, 48800, Pakistan</a>
+                <a href="tel:03215488288">+03215488288</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                Nice Paint
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/qqxq39UaERH8Aemz9">895W+M22, suwa asil, Sue Asil, Lahore, Pakistan</a>
+                <a href="tel:03124910980">+03124910980</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Gujranwala" style="display:none;" >
+              <div class="accordion-header">
+                Noori Paint Agency
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/cVJFad66sNoDmzCb6">Chowk Bagbanpura Hafizabad Road</a>
+                <a href="tel:923016419008">+923016419008</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                NEW PAINT VALLEY
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/BoZheqfJ3v81EAuf7">Shop # 4, Ch Hassan Gujjar Market, DHA Phase 2</a>
+                <a href="tel:923204006880">+923204006880</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Mardan" style="display:none;" >
+              <div class="accordion-header">
+                Pakistan Paint house
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/WdUnfCxo7aq2xs3D7">Khawaja Gunj Hoti, Mardan</a>
+                <a href="tel:03149601212">+03149601212</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Batkhela" style="display:none;" >
+              <div class="accordion-header">
+                Popular Paint (Hafeez Paint)
+              </div>
+              <div class="accordion-content">
+                <a href="">Near Zafar Park
+</a>
+                <a href="tel:0333 9503788">+0333 9503788</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Faisalabad" style="display:none;" >
+              <div class="accordion-header">
+                Punjab Paint & H/W Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/JEXgLWsYjpNm8gtr6">Nalay wala road near Punjab bank chack jhumra</a>
+                <a href="tel:0307-7002101">+0307-7002101</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Sahiwal" style="display:none;" >
+              <div class="accordion-header">
+                Rafique Hardware & Paint 
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/vjA7Af8jSzakjv2FA">Near Masjid Mahajreen Kot Khadim Ali Shah</a>
+                <a href="tel:923069144547">+923069144547</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Sargodha" style="display:none;" >
+              <div class="accordion-header">
+                Rainbow Enterprises shop
+              </div>
+              <div class="accordion-content">
+                <a href="https://www.google.com/maps/place/32%C2%B004'27.4%22N+72%C2%B041'56.5%22E/@32.0743014,72.6988753,21z/data=!4m4!3m3!8m2!3d32.0742898!4d72.6990353?hl=en&entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D">Larri Adda Road near Crystal Marriage Hall Sargodha</a>
+                <a href="tel:0300-6001906">+0300-6001906</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                Raja Paint House
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/TMHSwoRzQqNLDeB57">Bhatta Chowk, Badian Road, Lahore Cantt</a>
+                <a href="tel:923008429415">+923008429415</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                RANG MEHAL
+              </div>
+              <div class="accordion-content">
+                <a href="https://www.google.com/maps/dir//Rang+Mahal+Paints,+192-A+Multan+Rd,+Dholanwal+Lahore,+54000,+Pakistan/@31.4829403,74.3343893,7z/data=!4m8!4m7!1m0!1m5!1m1!1s0x391903138a2b4d41:0x2d34126d9d13530c!2m2!1d74.2841426!2d31.5275938?hl=en-PK&entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D">192-A Multan Rd, Dholanwal Lahore, 54000, Pakistan</a>
+                <a href="tel:03224972502">+03224972502</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                REHMAN PAINT AND HARDWARE STORE
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/6U4qr5QiAfmRV5rs7">29 Wahdat Rd, Muslim Town, Lahore, 54700, Pakistan</a>
+                <a href="tel:03224124418">+03224124418</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Pakpattan" style="display:none;" >
+              <div class="accordion-header">
+                Royal Paint House 
+              </div>
+              <div class="accordion-content">
+                <a href="https://goo.gl/maps/6bxXGcvX8CfGxGqc6">College Road</a>
+                <a href="tel:923336955150">+923336955150</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Karachi" style="display:none;" >
+              <div class="accordion-header">
+                Royal Paint Palace
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/9VEJo8r5U97aHkwf9">Shop # 11, Dada Garden, Sharfabad</a>
+                <a href="tel:923462380979">+923462380979</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Karachi" style="display:none;" >
+              <div class="accordion-header">
+                S.M. Co
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/bNZGU4Mqzoax26Qx5">19/34, Al-Hydri Memorial Market, Block E, North Nazimabad</a>
+                <a href="tel:923212101592">+923212101592</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Swabi" style="display:none;" >
+              <div class="accordion-header">
+                Saad Paint
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/GJKJTsuuc1HV5QJy5">Government college of technology, Pakistan</a>
+                <a href="tel:03139870160">+03139870160</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Gojra" style="display:none;" >
+              <div class="accordion-header">
+                Sabir Center
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/m8zeBa5NL6qgs1iu6?g_st=iwb">Mahdi Mohalla Chowk</a>
+                <a href="tel:03083033068">+03083033068</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Jhang" style="display:none;" >
+              <div class="accordion-header">
+                Saeed Paint House
+              </div>
+              <div class="accordion-content">
+                <a href="https://www.google.com/maps/place/31%C2%B016'05.5%22N+72%C2%B018'53.4%22E/@31.2682065,72.3122543,17z/data=!3m1!4b1!4m4!3m3!8m2!3d31.2682065!4d72.3148292?hl=en&entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D">bhakkar road Jhang Sadar</a>
+                <a href="tel:03457971223">+03457971223</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Talagang" style="display:none;" >
+              <div class="accordion-header">
+                Sajjad Hardware Glass Paint
+              </div>
+              <div class="accordion-content">
+                <a href="https://www.google.com/maps/place/Sajjad+Hardware+Paint+%26+Glass+Store/@32.9282722,72.4111557,17z/data=!4m6!3m5!1s0x392095d0045a8829:0x5651cc606021b291!8m2!3d32.9284344!4d72.4112115!16s%2Fg%2F11jtzhgv62?hl=en&entry=ttu&g_ep=EgoyMDI1MDkyOC4wIKXMDSoASAFQAw%3D%3D">Al Khaliq plaza near ubl bank Rawalpindi road  Talagang</a>
+                <a href="tel:0300-5230472">+0300-5230472</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Islamabad" style="display:none;" >
+              <div class="accordion-header">
+                Saleem Sons Paints & Hardware (Hamza Traders 2)
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/apbz9Kyjtg7VD87S9">15 Khayaban-e-Suhrwardy Rd, Aabpara G 6/1 G-6, Islamabad, Pakistan</a>
+                <a href="tel:0512277437">+0512277437</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Lahore" style="display:none;" >
+              <div class="accordion-header">
+                Shah Gee Sanitary Electric Hardware and Paint Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/zDqdYpkXRK6uGqGF6">
+1-C jubilee town lahore
+</a>
+                <a href="tel: 03237733139">+ 03237733139</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Sialkot" style="display:none;" >
+              <div class="accordion-header">
+                Shahid Paint & Building Material Store (B&C)
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/j68o8HJKMFJzt5RAA">Daska Road Aadha</a>
+                <a href="tel:923416812233">+923416812233</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Jhelum" style="display:none;" >
+              <div class="accordion-header">
+                Pak Hardware Paint Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://www.google.com/maps/search/New%20city%20hardware/@32.93391907,73.72979262,17z?hl=en">jamia asreya road Jhelum</a>
+                <a href="tel:923155415844">+923155415844</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Rawalpindi" style="display:none;" >
+              <div class="accordion-header">
+                Siddique Paint and Hardware Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/B7hkTTXAqwFQGicZ6">Main IJP road Haidery Market secter 1 khayaban sir syed Rawalpindi</a>
+                <a href="tel:03335709903">+03335709903</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Karachi" style="display:none;" >
+              <div class="accordion-header">
+                Taheri Paint
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/Lged4nwWaQrdJdfy6">3-C, 28th Street, Tauheed Commercial, Phase 5, D.H.A</a>
+                <a href="tel:923411289416">+923411289416</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Karachi" style="display:none;" >
+              <div class="accordion-header">
+                Taheri Paint Mart
+              </div>
+              <div class="accordion-content">
+                <a href="https://www.google.com/maps?q=24.79831886291504,67.04335021972656&z=17&hl=en">Shop no1 plot no54c 7street badarcomercial phase 5 dha</a>
+                <a href="tel:0341 1289416">+0341 1289416</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Rawalpindi" style="display:none;" >
+              <div class="accordion-header">
+                Universal Paint & Hardware Store
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/53is1XUvxydPB1yD7">Saidpur Rd, New Katarian Pindora,</a>
+                <a href="tel:03478567303">+03478567303</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Sialkot" style="display:none;" >
+              <div class="accordion-header">
+                Zaitoon Paint House
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/1ShB7zFxq2h9Kuoq8">Railway Road 
+</a>
+                <a href="tel:03006120408">+03006120408</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Faisalabad" style="display:none;" >
+              <div class="accordion-header">
+                Zubair paint 
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/upxUJk9QahAriZg77">Shabad morr jhang road faisalabad.</a>
+                <a href="tel:0300 7276040">+0300 7276040</a>
+              </div>
+            </div>
+            
+            <div class="accordion" data-city="Karachi" style="display:none;" >
+              <div class="accordion-header">
+                Zubair Paint House
+              </div>
+              <div class="accordion-content">
+                <a href="https://maps.app.goo.gl/hgpC8XeyxWyh9KoTA">Shop No. 3, Liberty Arcade, Block 13G, Gulshan-e-Iqbal</a>
+                <a href="tel:923002114258">+923002114258</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECTION 7: TECHNICAL INFORMATION (DARK SECTION CONTRAST)
+       ======================================================== -->
+  <section class="artista-tech-section" id="techInfo">
+    <div class="lux-container">
+      <div class="tech-header">
+        <div class="lux-eyebrow" style="color: var(--lux-gold-light);">Technical Specifications</div>
+        <h2 class="lux-section-title-light">TECHNICAL INFORMATION</h2>
+        <div class="pack-badge">Diamond Artista is available in 1Ltr Packing</div>
+      </div>
+
+      <div class="tech-grid">
+        <!-- Card 1: Coverage -->
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <h3 class="tech-card-title">COVERAGE</h3>
+            <span class="tech-category-icon">Surface Yield</span>
+          </div>
+          <div class="tech-details-list">
+            <div class="tech-item">
+              <div class="item-label">Primer</div>
+              <div class="item-body">
+                <b>Estimated Coverage:</b><br>
+                10-14 m² per liter coat.
+              </div>
+            </div>
+            <div class="tech-item">
+              <div class="item-label">Topcoat</div>
+              <div class="item-body">
+                <b>Estimated Coverage:</b><br>
+                5-7 m² per liter coat.<br>
+                <em>Marble Finish Coverage: 0.7-1.0 m² per liter per coat.</em>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Drying Time -->
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <h3 class="tech-card-title">DRYING TIME</h3>
+            <span class="tech-category-icon">Curing & Application</span>
+          </div>
+          <div class="tech-details-list">
+            <div class="tech-item">
+              <div class="item-label">Artista Primer</div>
+              <div class="item-body">
+                <b>Drying Time:</b> Touch dry at 20 minutes minimum. Hard dry at 1-hour minimum.<br>
+                <b>Recoating Interval:</b> 2 Hours Minimum. Based on normal conditions.
+              </div>
+            </div>
+            <div class="tech-item">
+              <div class="item-label">Artista Topcoat</div>
+              <div class="item-body">
+                <b>Drying Time:</b> Touch dry at 30 minutes minimum. Hard dry at 2 hours minimum.<br>
+                <b>Application Method:</b> Brush, Roller, Scraper.<br>
+                <b>Thinner / Cleaner:</b> Clean Water.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECTION 8: SPECIALISED WORKFORCE
+       ======================================================== -->
+  <section class="artista-workforce-section">
+    <div class="workforce-bg"></div>
+    <div class="workforce-overlay"></div>
+    <div class="lux-container workforce-container">
+      <div class="workforce-content">
+        <div class="lux-eyebrow" style="color: var(--lux-gold-light);">Certified Craftsmen</div>
+        <h2>SPECIALISED WORKFORCE</h2>
+        <p>These textures require trained applicators for best results. Connect with our approved experts to ensure flawless architectural execution.</p>
+        <a href="https://wa.me/923000228686" target="_blank" rel="noopener" class="btn-lux-gold">Request a Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECTION 9: DOWNLOAD BROCHURE
+       ======================================================== -->
+  <section class="artista-brochure-section" id="artistaBrochure">
+    <div class="brochure-container">
+      <div class="lux-eyebrow">Architectural Catalog</div>
+      <h2 class="lux-section-title-dark">Download Artista Brochure</h2>
+      <p class="lux-section-desc-dark" style="margin: 0 auto 36px auto;">Download our brochures for detailed product features to find the specific products that suit your needs.</p>
+
+      <div class="brochure-preview-frame">
+        <img src="https://cdn.shopify.com/s/files/1/0709/2089/6754/files/Artista.png?v=1731703622" alt="Diamond Paints Artista Brochure Catalog" loading="lazy">
+      </div>
+
+      <div>
+        <a href="https://cdn.shopify.com/s/files/1/0709/2089/6754/files/DP_Artista_Digital_Shade_Card_-_New.pdf?v=1731100639" target="_blank" rel="noopener" class="btn-lux-primary">
+          Download Brochure (PDF)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Logic for Dealer Filter & Smooth Velocity Marquee -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 1. Dealer Locator Selector & Accordions
+      const selector = document.getElementById('dealers-selector');
+      if (selector) {
+        selector.addEventListener('change', function() {
+          const selectedCity = this.value;
+          const accordions = document.querySelectorAll('.dealers-accordions .accordion');
+          
+          accordions.forEach(function(acc) {
+            if (!selectedCity || selectedCity === 'Select the City') {
+              acc.style.display = 'none';
+            } else if (acc.getAttribute('data-city') === selectedCity) {
+              acc.style.display = 'block';
+            } else {
+              acc.style.display = 'none';
+            }
+          });
+        });
+      }
+
+      const accordionHeaders = document.querySelectorAll('.dealers-accordions .accordion-header');
+      accordionHeaders.forEach(function(header) {
+        header.addEventListener('click', function() {
+          this.classList.toggle('active');
+        });
+      });
+
+      
+      // 3. MASTER FORMULATION PINNED SCROLLYTELLING LOGIC
+      const formulationTrack = document.getElementById('masterFormulationTrack');
+      const podPod = document.getElementById('productCenterPod');
+      const card1 = document.getElementById('uspCard1');
+      const card2 = document.getElementById('uspCard2');
+      const card3 = document.getElementById('uspCard3');
+      const card4 = document.getElementById('uspCard4');
+      const instruction = document.getElementById('scrollInstruction');
+      const formulationCta = document.getElementById('formulationCta');
+
+      // ══════════════════════════════════════════════════════════════════
+      //  SCROLL-LINKED ANIMATION
+      //  Card position is calculated from scroll progress on EVERY frame.
+      //  As user scrolls → card physically moves outward from behind gallon.
+      //  NO CSS transitions — JS drives every pixel every rAF tick.
+      // ══════════════════════════════════════════════════════════════════
+
+      var OFFSET = 520; // px — large enough so card starts fully hidden behind product
+
+      // dir: +1 = left column (card starts shifted RIGHT, slides LEFT to 0)
+      //      -1 = right column (card starts shifted LEFT, slides RIGHT to 0)
+      var cardDefs = [
+        { el: card1, start: 0.05, end: 0.28, dir: +1 }, // USP 01 — top left
+        { el: card2, start: 0.28, end: 0.51, dir: -1 }, // USP 02 — top right
+        { el: card3, start: 0.51, end: 0.74, dir: +1 }, // USP 03 — bottom left
+        { el: card4, start: 0.74, end: 0.90, dir: -1 }  // USP 04 — bottom right
+      ];
+
+      // Luxury ease-out: decelerates into resting position
+      function easeOutExpo(t) {
+        return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+      }
+
+      var targetScroll = 0;  // raw progress from scroll event
+      var smoothScroll = 0;  // damped progress driving the render
+
+      function getScrollProgress() {
+        if (!formulationTrack) return 0;
+        var rect = formulationTrack.getBoundingClientRect();
+        var scrollable = formulationTrack.offsetHeight - window.innerHeight;
+        if (scrollable <= 0) return 0;
+        return Math.max(0, Math.min(1, -rect.top / scrollable));
+      }
+
+      function renderFrame() {
+        if (window.innerWidth <= 991) {
+          // Mobile: show everything static
+          podPod && podPod.classList.add('visible');
+          cardDefs.forEach(function(def) {
+            if (!def.el) return;
+            def.el.style.transform  = 'translateX(0)';
+            def.el.style.opacity    = '1';
+            def.el.style.pointerEvents = 'auto';
+          });
+          formulationCta && formulationCta.classList.add('visible');
+          requestAnimationFrame(renderFrame);
+          return;
+        }
+
+        // Smooth damping — 0.09 factor = silky luxury feel
+        smoothScroll += (targetScroll - smoothScroll) * 0.09;
+        var p = smoothScroll;
+
+        // ── Product pod fades in at start ──
+        if (p >= 0.02) podPod && podPod.classList.add('visible');
+        else           podPod && podPod.classList.remove('visible');
+
+        // ── Scroll hint ──
+        if (instruction) instruction.style.opacity = p > 0.04 ? '0' : '1';
+
+        // ── Cards: position driven continuously by scroll progress ──
+        cardDefs.forEach(function(def) {
+          if (!def.el) return;
+
+          // Normalise card's scroll window to 0→1
+          var t = (p - def.start) / (def.end - def.start);
+          t = Math.max(0, Math.min(1, t));
+
+          var eased = easeOutExpo(t);
+
+          // Card X: starts at OFFSET (behind product), ends at 0 (resting spot)
+          var dx = def.dir * OFFSET * (1 - eased);
+
+          // Opacity: fade in over first 25% of card's movement window
+          var op = Math.min(1, t / 0.25);
+
+          def.el.style.transform     = 'translateX(' + dx.toFixed(2) + 'px)';
+          def.el.style.opacity       = op.toFixed(3);
+          def.el.style.pointerEvents = t >= 1 ? 'auto' : 'none';
+
+          // Border highlight
+          if (t > 0 && t < 1) {
+            def.el.classList.add('active');
+            def.el.classList.remove('passed');
+          } else if (t >= 1) {
+            def.el.classList.remove('active');
+            def.el.classList.add('passed');
+          } else {
+            def.el.classList.remove('active', 'passed');
+          }
+        });
+
+        // ── CTA ──
+        if (formulationCta) {
+          if (p >= 0.92) formulationCta.classList.add('visible');
+          else           formulationCta.classList.remove('visible');
+        }
+
+        requestAnimationFrame(renderFrame);
+      }
+
+      // Update target on scroll
+      window.addEventListener('scroll', function() {
+        targetScroll = getScrollProgress();
+      }, { passive: true });
+
+      // Reset on resize
+      window.addEventListener('resize', function() {
+        targetScroll = getScrollProgress();
+        smoothScroll = targetScroll;
+      }, { passive: true });
+
+      // Boot: initialise cards off-screen silently, then start loop
+      cardDefs.forEach(function(def) {
+        if (!def.el) return;
+        def.el.style.transition    = 'none';
+        def.el.style.transform     = 'translateX(' + (def.dir * OFFSET) + 'px)';
+        def.el.style.opacity       = '0';
+        def.el.style.pointerEvents = 'none';
+      });
+      targetScroll = getScrollProgress();
+      smoothScroll = targetScroll;
+      requestAnimationFrame(renderFrame);
+
+
+      // 2. ULTRA-SMOOTH VELOCITY-DAMPED INFINITE MARQUEE
+      const track = document.getElementById('marqueeTrack');
+      const viewport = document.getElementById('marqueeViewport');
+      
+      if (track && viewport) {
+        let currentPos = 0;
+        let cruiseSpeed = 0.9; // Base silky smooth speed (pixels per frame)
+        let currentSpeed = cruiseSpeed;
+        let targetSpeed = cruiseSpeed;
+        let isHovered = false;
+
+        function updateMarquee() {
+          // Smooth exponential velocity interpolation (ultra-smooth damping, zero choppy jumps)
+          currentSpeed += (targetSpeed - currentSpeed) * 0.05;
+          currentPos -= currentSpeed;
+
+          // Half-width boundary calculation for infinite wrap-around
+          const halfWidth = track.scrollWidth / 2;
+          if (Math.abs(currentPos) >= halfWidth) {
+            currentPos += halfWidth;
+          }
+
+          // Hardware-accelerated 60/120fps translate3d
+          track.style.transform = 'translate3d(' + currentPos.toFixed(2) + 'px, 0, 0)';
+          requestAnimationFrame(updateMarquee);
+        }
+
+        // Mouse hover: smoothly decelerates into an ultra-slow, elegant crawl (0.15px/frame)
+        viewport.addEventListener('mouseenter', function() {
+          isHovered = true;
+          targetSpeed = 0.18; // Silkily decelerates to a serene crawl instead of an abrupt freeze
+        });
+
+        viewport.addEventListener('mouseleave', function() {
+          isHovered = false;
+          targetSpeed = cruiseSpeed; // Silkily glides back up to normal speed
+        });
+
+        // Touch support for mobile devices
+        viewport.addEventListener('touchstart', function() {
+          targetSpeed = 0.15;
+        }, { passive: true });
+
+        viewport.addEventListener('touchend', function() {
+          targetSpeed = cruiseSpeed;
+        }, { passive: true });
+
+        // Start animation loop
+        requestAnimationFrame(updateMarquee);
+      }
+
+      // ─── HERO 2-COL STORY INFINITE REEL WITH HOVER DECELERATION ─────────
+      const storyCol1 = document.getElementById('heroStoryCol1');
+      const storyTrack1 = document.getElementById('heroStoryTrack1');
+      const storyCol2 = document.getElementById('heroStoryCol2');
+      const storyTrack2 = document.getElementById('heroStoryTrack2');
+
+      if (storyTrack1 && storyTrack2) {
+        // Col 1 moves UPWARDS
+        let pos1 = 0;
+        const cruise1 = 0.85; // normal cruise speed (px/frame)
+        const slow1 = 0.20;   // reduced speed on hover
+        let targetSpeed1 = cruise1;
+        let currentSpeed1 = cruise1;
+
+        // Col 2 moves DOWNWARDS (opposite direction)
+        let pos2 = 0;
+        const cruise2 = 0.75;
+        const slow2 = 0.18;
+        let targetSpeed2 = cruise2;
+        let currentSpeed2 = cruise2;
+
+        if (storyCol1) {
+          storyCol1.addEventListener('mouseenter', function() { targetSpeed1 = slow1; });
+          storyCol1.addEventListener('mouseleave', function() { targetSpeed1 = cruise1; });
+          storyCol1.addEventListener('touchstart', function() { targetSpeed1 = slow1; }, { passive: true });
+          storyCol1.addEventListener('touchend', function() { targetSpeed1 = cruise1; }, { passive: true });
+        }
+
+        if (storyCol2) {
+          storyCol2.addEventListener('mouseenter', function() { targetSpeed2 = slow2; });
+          storyCol2.addEventListener('mouseleave', function() { targetSpeed2 = cruise2; });
+          storyCol2.addEventListener('touchstart', function() { targetSpeed2 = slow2; }, { passive: true });
+          storyCol2.addEventListener('touchend', function() { targetSpeed2 = cruise2; }, { passive: true });
+        }
+
+        let initializedCol2 = false;
+
+        function animateHeroStories() {
+          const half1 = storyTrack1.scrollHeight / 2;
+          const half2 = storyTrack2.scrollHeight / 2;
+
+          if (half1 > 50 && half2 > 50) {
+            if (!initializedCol2) {
+              pos2 = -half2;
+              initializedCol2 = true;
+            }
+
+            // Col 1 interpolation (upward)
+            currentSpeed1 += (targetSpeed1 - currentSpeed1) * 0.06;
+            pos1 -= currentSpeed1;
+            if (Math.abs(pos1) >= half1) {
+              pos1 += half1;
+            }
+            storyTrack1.style.transform = 'translate3d(0, ' + pos1.toFixed(2) + 'px, 0)';
+
+            // Col 2 interpolation (downward)
+            currentSpeed2 += (targetSpeed2 - currentSpeed2) * 0.06;
+            pos2 += currentSpeed2;
+            if (pos2 >= 0) {
+              pos2 -= half2;
+            }
+            storyTrack2.style.transform = 'translate3d(0, ' + pos2.toFixed(2) + 'px, 0)';
+          }
+
+          requestAnimationFrame(animateHeroStories);
+        }
+
+        requestAnimationFrame(animateHeroStories);
+      }
+
+      // ─── FLOATING CURSOR STORY PREVIEW (MAGNIFIER BESIDE MOUSE) ──────────
+      const cursorPreview = document.getElementById('storyCursorPreview');
+      const previewImg = document.getElementById('storyPreviewImg');
+      const previewBadge = document.getElementById('storyPreviewBadge');
+      const previewTitle = document.getElementById('storyPreviewTitle');
+      const previewSub = document.getElementById('storyPreviewSub');
+      const storiesViewport = document.getElementById('heroStoriesViewport');
+
+      if (cursorPreview && previewImg && storiesViewport) {
+        let isHoveringStories = false;
+
+        function positionPreview(e) {
+          const previewWidth = 270;
+          const previewHeight = 405;
+          // Offset to side of mouse cursor
+          let targetX = e.clientX + 28;
+          let targetY = e.clientY - 140;
+
+          // Flip to left side if overflowing right edge
+          if (targetX + previewWidth > window.innerWidth - 18) {
+            targetX = e.clientX - previewWidth - 28;
+          }
+
+          // Keep within top and bottom bounds
+          if (targetY < 18) {
+            targetY = 18;
+          } else if (targetY + previewHeight > window.innerHeight - 18) {
+            targetY = window.innerHeight - previewHeight - 18;
+          }
+
+          cursorPreview.style.left = targetX + 'px';
+          cursorPreview.style.top = targetY + 'px';
+        }
+
+        // Delegate mouseenter/mousemove over each story card
+        const storyCards = document.querySelectorAll('.hero-story-card');
+        storyCards.forEach(function(card) {
+          card.addEventListener('mouseenter', function(e) {
+            const img = card.querySelector('img');
+            const badge = card.querySelector('.hero-story-badge');
+            const title = card.querySelector('.hero-story-name');
+            const desc = card.querySelector('.hero-story-desc');
+
+            if (img && img.src) {
+              previewImg.src = img.src;
+              if (previewBadge && badge) previewBadge.textContent = badge.textContent.trim();
+              if (previewTitle && title) previewTitle.textContent = title.textContent.trim();
+              if (previewSub && desc) previewSub.textContent = desc.textContent.trim();
+
+              positionPreview(e);
+              cursorPreview.classList.add('active');
+              isHoveringStories = true;
+            }
+          });
+
+          card.addEventListener('mousemove', function(e) {
+            if (isHoveringStories) {
+              positionPreview(e);
+            }
+          });
+        });
+
+        // Hide preview when leaving the story columns container
+        storiesViewport.addEventListener('mouseleave', function() {
+          isHoveringStories = false;
+          cursorPreview.classList.remove('active');
+        });
+      }
+
+      // 5. MOBILE STICKY STACKING OCCLUSION (PREVENTS DUAL FOOTERS)
+      // When a card locks into sticky position (top <= 24px), hide preceding card(s)
+      // so when the stack reaches the end of the section, previous cards never peek out from underneath.
+      const mobileRangeCards = document.querySelectorAll('.range-cards-grid > .range-card-col');
+      if (mobileRangeCards.length > 0) {
+        function updateMobileStackOcclusion() {
+          if (window.innerWidth > 991) {
+            mobileRangeCards.forEach(function(card) {
+              card.style.opacity = '';
+              card.style.visibility = '';
+            });
+            return;
+          }
+
+          for (let i = 0; i < mobileRangeCards.length - 1; i++) {
+            const nextCard = mobileRangeCards[i + 1];
+            const nextRect = nextCard.getBoundingClientRect();
+            if (nextRect.top <= 24) {
+              mobileRangeCards[i].style.opacity = '0';
+              mobileRangeCards[i].style.visibility = 'hidden';
+            } else {
+              mobileRangeCards[i].style.opacity = '1';
+              mobileRangeCards[i].style.visibility = 'visible';
+            }
+          }
+        }
+
+        window.addEventListener('scroll', updateMobileStackOcclusion, { passive: true });
+        window.addEventListener('resize', updateMobileStackOcclusion, { passive: true });
+        updateMobileStackOcclusion();
+      }
+    });
+  </script>
+
+</body>
+</html>
