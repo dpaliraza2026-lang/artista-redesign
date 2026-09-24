@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Artista [Variant 1: Editorial Atelier] — Diamond Paints</title>
+  <title>Artista [Variant 1: Inter Modern] — Diamond Paints</title>
   <meta name="description" content="Artista by Diamond Paints offers decorative texture paint effects with rich finishes. Create elegant feature walls that add depth, style, and visual impact to interiors.">
 
-  <!-- Variant 1: Cormorant Garamond + Plus Jakarta Sans -->
+  <!-- Variant 1: Inter Architectural Minimalist -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     /* ========================================================
@@ -24,40 +24,40 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
-    /* === VARIANT 1: Editorial Atelier === */
+    /* === VARIANT 1: Inter Modern === */
     :root {
-      /* Typography System */
-      --font-heading: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      --font-sub: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      /* Typography Tokens */
+      --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-sub: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-      /* Primary Light / White Palette */
+      /* Light / White Surfaces */
       --lux-white: #FFFFFF;
-      --lux-cream: #FAF9F5;
-      --lux-surface-light: #F5F4EE;
+      --lux-cream: #FAF9F6;
+      --lux-surface-light: #F3F2ED;
       --lux-surface-alt: #EFECE6;
-      --lux-border-light: #E6E4DC;
+      --lux-border-light: #E3E1DA;
       --lux-border-subtle: #ECEAE3;
       
-      /* Dark Contrast Palette */
-      --lux-dark-bg: #0A0B0E;
-      --lux-dark-card: #121318;
+      /* Dark Contrast Surfaces */
+      --lux-dark-bg: #09090C;
+      --lux-dark-card: #111116;
       --lux-dark-card-alt: #1B1B22;
       --lux-dark-border: rgba(255, 255, 255, 0.1);
       --lux-dark-border-subtle: rgba(255, 255, 255, 0.06);
 
-      /* Typography Tones (High Contrast & Non-Muddy) */
-      --lux-text-dark: #111114;
-      --lux-text-body: #464650;
-      --lux-text-muted: #747480;
-      --lux-text-white: #F8F8FA;
-      --lux-text-white-dim: #D4D4DC;
+      /* Typography Contrast (Crisp & High-Definition) */
+      --lux-text-dark: #0D0D11;
+      --lux-text-body: #3C3C44;
+      --lux-text-muted: #6E6E78;
+      --lux-text-white: #FFFFFF;
+      --lux-text-white-dim: #D8D8DF;
 
       /* Gold Accent Palette */
-      --lux-gold: #C29B38;
-      --lux-gold-light: #E0BA5E;
-      --lux-gold-champagne: #F0DCAB;
-      --lux-gold-muted: #8E7025;
+      --lux-gold: #B8860B;
+      --lux-gold-light: #D4AF37;
+      --lux-gold-champagne: #F5E6C4;
+      --lux-gold-muted: #8A6508;
       --lux-gold-border: rgba(184, 142, 62, 0.35);
       --lux-gold-border-subtle: rgba(184, 142, 62, 0.18);
 
@@ -82,17 +82,17 @@
     .accordion-header h3,
     .modal h3 {
       font-family: var(--font-heading) !important;
-      letter-spacing: -0.01em !important;
+      letter-spacing: -0.03em !important;
     }
 
     .hero-main-heading {
       font-weight: 500 !important;
-      line-height: 1.08 !important;
+      line-height: 1.1 !important;
     }
     .hero-main-heading .gold-title-accent {
       font-family: var(--font-heading) !important;
       color: var(--lux-gold-light) !important;
-      font-style: italic; font-weight: 400; color: #E0BA5E !important;
+      font-weight: 600; color: #D4AF37 !important;
     }
 
     .lux-section-title-dark,
@@ -104,15 +104,15 @@
     .card-title {
       font-family: var(--font-sub) !important;
       font-weight: 600 !important;
-      letter-spacing: -0.01em !important;
+      letter-spacing: -0.015em !important;
     }
 
     /* Eyebrow & Badge Typography */
     .lux-eyebrow {
       font-family: var(--font-body) !important;
-      font-weight: 600 !important;
-      letter-spacing: 0.22em !important;
-      color: #A37B24 !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.24em !important;
+      color: #9E7422 !important;
     }
     .hero-content-col .lux-eyebrow {
       color: var(--lux-gold-champagne) !important;
@@ -131,13 +131,23 @@
       color: #000000 !important;
     }
 
-    /* Refined Luxury Hero Pills */
+    /* Refined Luxury Hero Pills (Compact & Architectural) */
+    .hero-features-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 8px !important;
+      margin-bottom: 34px !important;
+    }
     .hero-pill-feature {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 7px !important;
       background: rgba(255, 255, 255, 0.05) !important;
-      border: 1px solid rgba(224, 186, 94, 0.28) !important;
-      padding: 5px 14px !important;
+      border: 1px solid rgba(255, 255, 255, 0.16) !important;
+      padding: 5px 13px !important;
       border-radius: 30px !important;
-      color: #EBEBF2 !important;
+      color: #F0F0F5 !important;
       font-size: 11px !important;
       font-weight: 500 !important;
       letter-spacing: 0.04em !important;
@@ -147,6 +157,81 @@
       width: 4.5px !important;
       height: 4.5px !important;
       background-color: var(--lux-gold-light) !important;
+      border-radius: 50% !important;
+      flex-shrink: 0 !important;
+    }
+
+    
+    /* ========================================================
+       FLOATING LUXURY VARIANT SWITCHER BAR
+       ======================================================== */
+    .lux-variant-bar {
+      position: fixed;
+      bottom: 22px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: -moz-fit-content;
+      width: fit-content;
+      max-width: 95vw;
+      z-index: 9999999;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(12, 12, 16, 0.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      border-radius: 40px;
+      padding: 6px 10px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45) !important;
+    }
+    .lux-variant-label {
+      color: #D4AF37;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      padding: 0 8px;
+      text-transform: uppercase;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    }
+    .lux-variant-btn {
+      color: #D5D5DC !important;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      padding: 6px 12px;
+      border-radius: 20px;
+      text-decoration: none !important;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+      display: inline-block;
+    }
+    .lux-variant-btn:hover {
+      color: #FFFFFF !important;
+      background: rgba(255, 255, 255, 0.12);
+    }
+    .lux-variant-btn.active {
+      background: #D4AF37 !important;
+      color: #0A0A0C !important;
+      font-weight: 600;
+    }
+    @media (max-width: 768px) {
+      .lux-variant-bar {
+        bottom: 10px;
+        padding: 4px 6px;
+        gap: 3px;
+        overflow-x: auto;
+      }
+      .lux-variant-label {
+        display: none;
+      }
+      .lux-variant-btn {
+        font-size: 9.5px;
+        padding: 5px 8px;
+      }
     }
 
     html {
@@ -2255,77 +2340,7 @@
       background-color: #17171E;
     }
 
-    /* ========================================================
-       FLOATING LUXURY VARIANT SWITCHER BAR
-       ======================================================== */
-    .lux-variant-bar {
-      position: fixed;
-      bottom: 22px;
-      left: 0;
-      right: 0;
-      margin-left: auto;
-      margin-right: auto;
-      width: -moz-fit-content;
-      width: fit-content;
-      max-width: 92vw;
-      z-index: 9999999;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(12, 12, 15, 0.92);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(212, 175, 55, 0.45);
-      border-radius: 40px;
-      padding: 6px 10px;
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45) !important;
-    }
-    .lux-variant-label {
-      color: #D4AF37;
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      padding: 0 10px;
-      text-transform: uppercase;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-    }
-    .lux-variant-btn {
-      color: #D5D5DC !important;
-      font-size: 11.5px;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-      padding: 6px 14px;
-      border-radius: 20px;
-      text-decoration: none !important;
-      transition: all 0.22s ease;
-      white-space: nowrap;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-      display: inline-block;
-    }
-    .lux-variant-btn:hover {
-      color: #FFFFFF !important;
-      background: rgba(255, 255, 255, 0.12);
-    }
-    .lux-variant-btn.active {
-      background: #D4AF37 !important;
-      color: #0A0A0C !important;
-      font-weight: 600;
-    }
-    @media (max-width: 768px) {
-      .lux-variant-bar {
-        bottom: 12px;
-        padding: 5px 8px;
-        gap: 4px;
-        overflow-x: auto;
-      }
-      .lux-variant-label {
-        display: none;
-      }
-      .lux-variant-btn {
-        font-size: 10px;
-        padding: 5px 10px;
-      }
-    }
+    
 
   </style>
 </head>
@@ -4981,14 +4996,17 @@ Lahore, Punjab</a>
     });
   </script>
 
-  <!-- LUXURY DESIGN VARIANT SWITCHER (EASY MANAGER REVIEW) -->
+  
+
+
   <!-- LUXURY DESIGN VARIANT SWITCHER (EASY MANAGER REVIEW) -->
   <aside class="lux-variant-bar" aria-label="Variant Switcher">
     <span class="lux-variant-label">DESIGN VARIANTS:</span>
-    <a href="variant-1.html" class="lux-variant-btn active">1. Atelier (Cormorant)</a>
-    <a href="variant-2.html" class="lux-variant-btn ">2. Modern Couture (Playfair)</a>
-    <a href="variant-3.html" class="lux-variant-btn ">3. Venetian Heritage (Cinzel)</a>
+    <a href="variant-1.html" class="lux-variant-btn active">1. Inter Modern</a>
+    <a href="variant-2.html" class="lux-variant-btn ">2. Atelier (Cormorant)</a>
+    <a href="variant-3.html" class="lux-variant-btn ">3. Couture (Playfair)</a>
+    <a href="variant-4.html" class="lux-variant-btn ">4. Venetian (Cinzel)</a>
   </aside>
-
+  
 </body>
 </html>
