@@ -131,107 +131,56 @@
       color: #000000 !important;
     }
 
-    /* Refined Luxury Hero Pills (Compact & Architectural) */
-    .hero-features-bar {
+    /* ========================================================
+       COMPACT HERO PILLS INFINITE MARQUEE (RIGHT TO LEFT)
+       ======================================================== */
+    .hero-pills-marquee-viewport {
+      position: relative;
+      width: 100%;
+      max-width: 540px;
+      overflow: hidden;
+      margin-bottom: 28px;
+      padding: 3px 0;
+      cursor: pointer;
+      mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    }
+    .hero-pills-track {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      gap: 8px !important;
-      margin-bottom: 34px !important;
+      align-items: center;
+      gap: 8px;
+      width: max-content;
+      will-change: transform;
     }
     .hero-pill-feature {
       display: inline-flex !important;
       align-items: center !important;
-      gap: 7px !important;
+      gap: 6px !important;
       background: rgba(194, 141, 53, 0.09) !important;
       border: 1px solid rgba(222, 170, 78, 0.32) !important;
-      padding: 5px 14px !important;
-      border-radius: 24px !important;
+      padding: 3.5px 10px !important;
+      border-radius: var(--radius-pill) !important;
       color: #FAF6EF !important;
-      font-size: 11px !important;
+      font-size: 10px !important;
       font-weight: 500 !important;
       letter-spacing: 0.04em !important;
       text-transform: uppercase !important;
+      white-space: nowrap !important;
+      flex-shrink: 0 !important;
+      line-height: 1.3 !important;
+      transition: border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease !important;
+    }
+    .hero-pill-feature:hover {
+      border-color: rgba(212, 175, 55, 0.6) !important;
+      background: rgba(212, 175, 55, 0.12) !important;
+      color: #FFFFFF !important;
     }
     .hero-pill-dot {
-      width: 4.5px !important;
-      height: 4.5px !important;
+      width: 4px !important;
+      height: 4px !important;
       background-color: var(--lux-gold-light) !important;
       border-radius: 50% !important;
       flex-shrink: 0 !important;
-    }
-
-    
-    /* ========================================================
-       FLOATING LUXURY VARIANT SWITCHER BAR
-       ======================================================== */
-    .lux-variant-bar {
-      position: fixed;
-      bottom: 22px;
-      left: 0;
-      right: 0;
-      margin-left: auto;
-      margin-right: auto;
-      width: -moz-fit-content;
-      width: fit-content;
-      max-width: 95vw;
-      z-index: 9999999;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      background: rgba(12, 12, 16, 0.94);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(212, 175, 55, 0.45);
-      border-radius: 40px;
-      padding: 6px 10px;
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45) !important;
-    }
-    .lux-variant-label {
-      color: #D4AF37;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      padding: 0 8px;
-      text-transform: uppercase;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-    }
-    .lux-variant-btn {
-      color: #D5D5DC !important;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-      padding: 6px 12px;
-      border-radius: 20px;
-      text-decoration: none !important;
-      transition: all 0.2s ease;
-      white-space: nowrap;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-      display: inline-block;
-    }
-    .lux-variant-btn:hover {
-      color: #FFFFFF !important;
-      background: rgba(255, 255, 255, 0.12);
-    }
-    .lux-variant-btn.active {
-      background: #D4AF37 !important;
-      color: #0A0A0C !important;
-      font-weight: 600;
-    }
-    @media (max-width: 768px) {
-      .lux-variant-bar {
-        bottom: 10px;
-        padding: 4px 6px;
-        gap: 3px;
-        overflow-x: auto;
-      }
-      .lux-variant-label {
-        display: none;
-      }
-      .lux-variant-btn {
-        font-size: 9.5px;
-        padding: 5px 8px;
-      }
     }
 
     html {
@@ -585,155 +534,7 @@
       text-align: left;
       font-weight: 400;
     }
-    .hero-features-bar {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      gap: 8px;
-      margin-bottom: 34px;
-    }
-    .hero-pill-feature {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      padding: 5px 13px;
-      border-radius: var(--radius-pill);
-      color: var(--lux-white);
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-    .hero-pill-dot {
-      width: 4.5px;
-      height: 4.5px;
-      background-color: var(--lux-gold-light);
-      border-radius: 50%;
-    }
-    .hero-btn-group {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      gap: 16px;
-    }
-
-    /* Right Side: 2-Col Infinite Story Animation Reel */
-    .hero-stories-col {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-    }
-    .hero-stories-viewport {
-      position: relative;
-      width: 100%;
-      max-width: 480px;
-      height: 600px;
-      overflow: hidden;
-      mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
-      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
-    }
-    .hero-stories-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      height: 100%;
-    }
-    .hero-story-col {
-      position: relative;
-      overflow: hidden;
-      height: 100%;
-      cursor: pointer;
-    }
-    .hero-story-track {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      will-change: transform;
-    }
-    .hero-story-card {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 9 / 14;
-      border-radius: 14px;
-      overflow: hidden;
-      background-color: #16161a;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      flex-shrink: 0;
-      box-shadow: none !important;
-      transition: border-color 0.3s ease;
-    }
-    .hero-story-col:hover .hero-story-card {
-      border-color: rgba(212, 175, 55, 0.4);
-    }
-    .hero-story-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      pointer-events: none;
-    }
-    .hero-story-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.22) 0%, transparent 40%, rgba(0, 0, 0, 0.82) 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 12px;
-      pointer-events: none;
-    }
-    .hero-story-badge {
-      align-self: flex-start;
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--lux-gold-light);
-      background: rgba(12, 12, 14, 0.72);
-      padding: 3px 8px;
-      border-radius: 4px;
-      border: 1px solid rgba(212, 175, 55, 0.3);
-    }
-    .hero-story-meta {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-    .hero-story-name {
-      font-size: 13px;
-      font-weight: 600;
-      color: #FFFFFF;
-      letter-spacing: -0.01em;
-      line-height: 1.25;
-    }
-    .hero-story-desc {
-      font-size: 10px;
-      color: rgba(255, 255, 255, 0.75);
-      letter-spacing: 0.02em;
-    }
-
-    @media screen and (max-width: 991px) {
-      .hero-cinematic-section {
-        padding: 60px 0 40px 0;
-        min-height: auto;
-      }
-      .hero-layout-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-      .hero-content-col {
-        text-align: left;
-      }
-      .hero-stories-viewport {
-        max-width: 440px;
-        height: 500px;
-        margin: 0 auto;
-      }
-    }
+    /* hero-features-bar replaced by hero-pills-marquee-viewport */
 
     /* Floating Cursor Story Preview Tooltip */
     .story-cursor-preview {
@@ -2368,22 +2169,80 @@
           Elevate walls with high-end textures designed for durability and design impact.
         </p>
 
-        <div class="hero-features-bar">
-          <div class="hero-pill-feature">
-            <span class="hero-pill-dot"></span>
-            <span>Durable and long-lasting</span>
-          </div>
-          <div class="hero-pill-feature">
-            <span class="hero-pill-dot"></span>
-            <span>Eco-Friendly</span>
-          </div>
-          <div class="hero-pill-feature">
-            <span class="hero-pill-dot"></span>
-            <span>Extensive Color Range</span>
-          </div>
-          <div class="hero-pill-feature">
-            <span class="hero-pill-dot"></span>
-            <span>Highly Customizable</span>
+                <!-- Compact Hero Pills Infinite Marquee (Right-to-Left with Hover Slowdown) -->
+        <div class="hero-pills-marquee-viewport" id="heroPillsViewport" title="Hover to slow animation">
+          <div class="hero-pills-track" id="heroPillsTrack">
+            <!-- Set 1 -->
+            <div class="hero-pill-feature">
+              <span class="hero-pill-dot"></span>
+              <span>Durable &amp; Long-Lasting</span>
+            </div>
+            <div class="hero-pill-feature">
+              <span class="hero-pill-dot"></span>
+              <span>Eco-Friendly</span>
+            </div>
+            <div class="hero-pill-feature">
+              <span class="hero-pill-dot"></span>
+              <span>Extensive Color Range</span>
+            </div>
+            <div class="hero-pill-feature">
+              <span class="hero-pill-dot"></span>
+              <span>Highly Customizable</span>
+            </div>
+
+            <!-- Set 2 -->
+            <div class="hero-pill-feature">
+              <span class="hero-pill-dot"></span>
+              <span>Durable &amp; Long-Lasting</span>
+            </div>
+            <div class="hero-pill-feature">
+              <span class="hero-pill-dot"></span>
+              <span>Eco-Friendly</span>
+            </div>
+            <div class="hero-pill-feature">
+              <span class="hero-pill-dot"></span>
+              <span>Extensive Color Range</span>
+            </div>
+            <div class="hero-pill-feature">
+              <span class="hero-pill-dot"></span>
+              <span>Highly Customizable</span>
+            </div>
+
+            <!-- Set 3 -->
+            <div class="hero-pill-feature">
+              <span class="hero-pill-dot"></span>
+              <span>Durable &amp; Long-Lasting</span>
+            </div>
+            <div class="hero-pill-feature">
+              <span class="hero-pill-dot"></span>
+              <span>Eco-Friendly</span>
+            </div>
+            <div class="hero-pill-feature">
+              <span class="hero-pill-dot"></span>
+              <span>Extensive Color Range</span>
+            </div>
+            <div class="hero-pill-feature">
+              <span class="hero-pill-dot"></span>
+              <span>Highly Customizable</span>
+            </div>
+
+            <!-- Set 4 -->
+            <div class="hero-pill-feature">
+              <span class="hero-pill-dot"></span>
+              <span>Durable &amp; Long-Lasting</span>
+            </div>
+            <div class="hero-pill-feature">
+              <span class="hero-pill-dot"></span>
+              <span>Eco-Friendly</span>
+            </div>
+            <div class="hero-pill-feature">
+              <span class="hero-pill-dot"></span>
+              <span>Extensive Color Range</span>
+            </div>
+            <div class="hero-pill-feature">
+              <span class="hero-pill-dot"></span>
+              <span>Highly Customizable</span>
+            </div>
           </div>
         </div>
 
@@ -4772,7 +4631,7 @@ Lahore, Punjab</a>
       requestAnimationFrame(renderFrame);
 
 
-      // 2. ULTRA-SMOOTH VELOCITY-DAMPED INFINITE MARQUEE
+            // 2. ULTRA-SMOOTH VELOCITY-DAMPED INFINITE MARQUEE
       const track = document.getElementById('marqueeTrack');
       const viewport = document.getElementById('marqueeViewport');
       
@@ -4821,6 +4680,49 @@ Lahore, Punjab</a>
 
         // Start animation loop
         requestAnimationFrame(updateMarquee);
+      }
+
+      // ─── HERO PILLS INFINITE MARQUEE WITH HOVER DECELERATION ─────────
+      const pillsViewport = document.getElementById('heroPillsViewport');
+      const pillsTrack = document.getElementById('heroPillsTrack');
+
+      if (pillsViewport && pillsTrack) {
+        let pillsPos = 0;
+        const cruiseSpeed = 0.65; // Base silky smooth speed (pixels per frame)
+        const slowSpeed = 0.15;   // Decelerates on hover
+        let targetSpeed = cruiseSpeed;
+        let currentSpeed = cruiseSpeed;
+
+        function updatePillsMarquee() {
+          currentSpeed += (targetSpeed - currentSpeed) * 0.05;
+          pillsPos -= currentSpeed; // Right to left
+
+          const halfWidth = pillsTrack.scrollWidth / 2;
+          if (halfWidth > 50 && Math.abs(pillsPos) >= halfWidth) {
+            pillsPos += halfWidth;
+          }
+
+          pillsTrack.style.transform = 'translate3d(' + pillsPos.toFixed(2) + 'px, 0, 0)';
+          requestAnimationFrame(updatePillsMarquee);
+        }
+
+        pillsViewport.addEventListener('mouseenter', function() {
+          targetSpeed = slowSpeed;
+        });
+
+        pillsViewport.addEventListener('mouseleave', function() {
+          targetSpeed = cruiseSpeed;
+        });
+
+        pillsViewport.addEventListener('touchstart', function() {
+          targetSpeed = slowSpeed;
+        }, { passive: true });
+
+        pillsViewport.addEventListener('touchend', function() {
+          targetSpeed = cruiseSpeed;
+        }, { passive: true });
+
+        requestAnimationFrame(updatePillsMarquee);
       }
 
       // ─── HERO 2-COL STORY INFINITE REEL WITH HOVER DECELERATION ─────────
