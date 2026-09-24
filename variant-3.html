@@ -139,7 +139,7 @@
       width: 100%;
       max-width: 540px;
       overflow: hidden;
-      margin-bottom: 28px;
+      margin: 0 auto 28px auto !important;
       padding: 3px 0;
       cursor: pointer;
       mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
@@ -156,11 +156,11 @@
       display: inline-flex !important;
       align-items: center !important;
       gap: 6px !important;
-      background: rgba(0, 0, 0, 0.35) !important;
-      border: 1px solid rgba(255, 255, 255, 0.22) !important;
+      background: rgba(255, 255, 255, 0.05) !important;
+      border: 1px solid rgba(255, 255, 255, 0.14) !important;
       padding: 3.5px 10px !important;
       border-radius: var(--radius-pill) !important;
-      color: #FFFFFF !important;
+      color: rgba(255, 255, 255, 0.88) !important;
       font-size: 10px !important;
       font-weight: 500 !important;
       letter-spacing: 0.04em !important;
@@ -183,10 +183,85 @@
       flex-shrink: 0 !important;
     }
 
+    
+    /* ========================================================
+       FLOATING LUXURY VARIANT SWITCHER BAR
+       ======================================================== */
+    .lux-variant-bar {
+      position: fixed;
+      bottom: 22px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: -moz-fit-content;
+      width: fit-content;
+      max-width: 95vw;
+      z-index: 9999999;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(12, 12, 16, 0.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      border-radius: 40px;
+      padding: 6px 10px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45) !important;
+    }
+    .lux-variant-label {
+      color: #D4AF37;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      padding: 0 8px;
+      text-transform: uppercase;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    }
+    .lux-variant-btn {
+      color: #D5D5DC !important;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      padding: 6px 12px;
+      border-radius: 20px;
+      text-decoration: none !important;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+      display: inline-block;
+    }
+    .lux-variant-btn:hover {
+      color: #FFFFFF !important;
+      background: rgba(255, 255, 255, 0.12);
+    }
+    .lux-variant-btn.active {
+      background: #D4AF37 !important;
+      color: #0A0A0C !important;
+      font-weight: 600;
+    }
+    @media (max-width: 768px) {
+      .lux-variant-bar {
+        bottom: 10px;
+        padding: 4px 6px;
+        gap: 3px;
+        overflow-x: auto;
+      }
+      .lux-variant-label {
+        display: none;
+      }
+      .lux-variant-btn {
+        font-size: 9.5px;
+        padding: 5px 8px;
+      }
+    }
+
     html {
       scroll-behavior: smooth;
       background-color: var(--lux-white);
       color: var(--lux-text-dark);
+      overflow-x: hidden;
+      max-width: 100%;
     }
 
     body {
@@ -195,6 +270,8 @@
       line-height: 1.6;
       font-size: 15px;
       overflow-x: hidden;
+      max-width: 100%;
+      width: 100%;
     }
 
     /* STRICT RULES: ZERO DROP SHADOW, ZERO GLOW, ZERO ON-HOVER LIFT */
@@ -205,20 +282,26 @@
     }
 
     /* Allow transform for marquee + USP card slide animations + product pod + hero story tracks + cursor preview + gold ambient orbs */
-    *:not(.marquee-track):not(.marquee-track *):not(.usp-card):not(.product-center-pod):not(.hero-story-track):not(.hero-story-track *):not(.story-cursor-preview):not(.story-cursor-preview *):not(.gold-ambient-orb):not(.gold-ambient-orb *) {
+    *:not(.marquee-track):not(.marquee-track *):not(.usp-card):not(.product-center-pod):not(.hero-story-track):not(.hero-story-track *):not(.story-cursor-preview):not(.story-cursor-preview *):not(.gold-ambient-orb):not(.gold-ambient-orb *):not(.hero-pills-track):not(.hero-pills-track *) {
       transform: none !important;
     }
-    *:not(.marquee-track):not(.marquee-track *):not(.usp-card):not(.product-center-pod):not(.hero-story-track):not(.hero-story-track *):not(.story-cursor-preview):not(.story-cursor-preview *):not(.gold-ambient-orb):not(.gold-ambient-orb *):hover,
-    *:not(.marquee-track):not(.marquee-track *):not(.usp-card):not(.product-center-pod):not(.hero-story-track):not(.hero-story-track *):not(.story-cursor-preview):not(.story-cursor-preview *):not(.gold-ambient-orb):not(.gold-ambient-orb *):focus,
-    *:not(.marquee-track):not(.marquee-track *):not(.usp-card):not(.product-center-pod):not(.hero-story-track):not(.hero-story-track *):not(.story-cursor-preview):not(.story-cursor-preview *):not(.gold-ambient-orb):not(.gold-ambient-orb *):active {
+    *:not(.marquee-track):not(.marquee-track *):not(.usp-card):not(.product-center-pod):not(.hero-story-track):not(.hero-story-track *):not(.story-cursor-preview):not(.story-cursor-preview *):not(.gold-ambient-orb):not(.gold-ambient-orb *):not(.hero-pills-track):not(.hero-pills-track *):hover,
+    *:not(.marquee-track):not(.marquee-track *):not(.usp-card):not(.product-center-pod):not(.hero-story-track):not(.hero-story-track *):not(.story-cursor-preview):not(.story-cursor-preview *):not(.gold-ambient-orb):not(.gold-ambient-orb *):not(.hero-pills-track):not(.hero-pills-track *):focus,
+    *:not(.marquee-track):not(.marquee-track *):not(.usp-card):not(.product-center-pod):not(.hero-story-track):not(.hero-story-track *):not(.story-cursor-preview):not(.story-cursor-preview *):not(.gold-ambient-orb):not(.gold-ambient-orb *):not(.hero-pills-track):not(.hero-pills-track *):active {
       transform: none !important;
     }
 
     /* Containers & Spacing */
     .lux-container {
+      width: 100%;
       max-width: 1320px;
       margin: 0 auto;
       padding: 0 28px;
+    }
+    @media screen and (max-width: 768px) {
+      .lux-container {
+        padding: 0 16px;
+      }
     }
 
     .lux-eyebrow {
@@ -504,12 +587,16 @@
       align-items: center;
     }
     .hero-content-col {
-      text-align: left;
+      text-align: center !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
     }
     .hero-content-col .lux-eyebrow {
       color: var(--lux-gold-champagne);
       margin-bottom: 14px;
-      text-align: left;
+      text-align: center !important;
     }
     .hero-main-heading {
       color: var(--lux-white);
@@ -518,7 +605,7 @@
       line-height: 1.14;
       letter-spacing: -0.02em;
       margin: 0 0 20px 0;
-      text-align: left;
+      text-align: center !important;
     }
     .hero-main-heading .gold-title-accent {
       color: var(--lux-gold-light);
@@ -530,11 +617,196 @@
       font-size: clamp(16px, 1.5vw, 19px);
       line-height: 1.65;
       max-width: 560px;
-      margin: 0 0 32px 0;
-      text-align: left;
+      margin: 0 auto 30px auto !important;
+      text-align: center !important;
       font-weight: 400;
     }
-    /* hero-features-bar replaced by hero-pills-marquee-viewport */
+    /* hero-features-bar replaced by .hero-pills-marquee-viewport */
+    .hero-btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 16px;
+      margin: 0 auto !important;
+    }
+
+    /* Right Side: 2-Col Infinite Story Animation Reel */
+    .hero-stories-col {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    .hero-stories-viewport {
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+      height: 600px;
+      overflow: hidden;
+      mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
+    }
+    .hero-stories-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      height: 100%;
+    }
+    .hero-story-col {
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+      cursor: pointer;
+    }
+    .hero-story-track {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      will-change: transform;
+    }
+    .hero-story-card {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 9 / 14;
+      border-radius: 14px;
+      overflow: hidden;
+      background-color: #16161a;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      flex-shrink: 0;
+      box-shadow: none !important;
+      transition: border-color 0.3s ease;
+    }
+    .hero-story-col:hover .hero-story-card {
+      border-color: rgba(212, 175, 55, 0.4);
+    }
+    .hero-story-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      pointer-events: none;
+    }
+    .hero-story-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.22) 0%, transparent 40%, rgba(0, 0, 0, 0.82) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 12px;
+      pointer-events: none;
+    }
+    .hero-story-badge {
+      align-self: flex-start;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--lux-gold-light);
+      background: rgba(12, 12, 14, 0.72);
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+    .hero-story-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .hero-story-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: #FFFFFF;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+    .hero-story-desc {
+      font-size: 10px;
+      color: rgba(255, 255, 255, 0.75);
+      letter-spacing: 0.02em;
+    }
+
+    @media screen and (max-width: 991px) {
+      .hero-cinematic-section {
+        padding: 54px 0 36px 0;
+        min-height: auto;
+        overflow: hidden;
+      }
+      .hero-layout-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 36px;
+      }
+      .hero-content-col {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        text-align: center !important;
+        align-items: center !important;
+        padding: 0 !important;
+      }
+      .hero-main-heading {
+        font-size: clamp(28px, 6.5vw, 44px) !important;
+        line-height: 1.18 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        word-break: break-word !important;
+      }
+      .hero-lead-text {
+        font-size: 15px !important;
+        line-height: 1.55 !important;
+        width: 100% !important;
+        max-width: 480px !important;
+        margin: 0 auto 24px auto !important;
+        padding: 0 8px !important;
+      }
+      .hero-pills-marquee-viewport {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto 24px auto !important;
+      }
+      .hero-stories-col {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+      }
+      .hero-stories-viewport {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 480px;
+        margin: 0 auto;
+      }
+      .hero-stories-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .hero-btn-group {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        margin: 0 auto !important;
+        gap: 12px !important;
+      }
+      .hero-btn-group .btn-lux-gold,
+      .hero-btn-group .btn-lux-outline-light {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 13px 20px !important;
+        font-size: 11.5px !important;
+        letter-spacing: 0.12em !important;
+        white-space: nowrap !important;
+      }
+    }
 
     /* Floating Cursor Story Preview Tooltip */
     .story-cursor-preview {
@@ -2169,7 +2441,7 @@
           Elevate walls with high-end textures designed for durability and design impact.
         </p>
 
-                <!-- Compact Hero Pills Infinite Marquee (Right-to-Left with Hover Slowdown) -->
+        <!-- Compact Hero Pills Infinite Marquee (Right-to-Left with Hover Slowdown) -->
         <div class="hero-pills-marquee-viewport" id="heroPillsViewport" title="Hover to slow animation">
           <div class="hero-pills-track" id="heroPillsTrack">
             <!-- Set 1 -->
@@ -4631,7 +4903,7 @@ Lahore, Punjab</a>
       requestAnimationFrame(renderFrame);
 
 
-            // 2. ULTRA-SMOOTH VELOCITY-DAMPED INFINITE MARQUEE
+      // 2. ULTRA-SMOOTH VELOCITY-DAMPED INFINITE MARQUEE
       const track = document.getElementById('marqueeTrack');
       const viewport = document.getElementById('marqueeViewport');
       
@@ -4702,7 +4974,7 @@ Lahore, Punjab</a>
             pillsPos += halfWidth;
           }
 
-          pillsTrack.style.transform = 'translate3d(' + pillsPos.toFixed(2) + 'px, 0, 0)';
+          pillsTrack.style.setProperty('transform', 'translate3d(' + pillsPos.toFixed(2) + 'px, 0, 0)', 'important');
           requestAnimationFrame(updatePillsMarquee);
         }
 
