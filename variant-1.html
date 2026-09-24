@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Artista Luxurious Paint Effects — Diamond Paints</title>
+  <title>Artista [Variant 1: Editorial Atelier] — Diamond Paints</title>
   <meta name="description" content="Artista by Diamond Paints offers decorative texture paint effects with rich finishes. Create elegant feature walls that add depth, style, and visual impact to interiors.">
 
-  <!-- Inter Font Only -->
+  <!-- Variant 1: Cormorant Garamond + Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     /* ========================================================
@@ -19,46 +19,134 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+      font-family: var(--font-body);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
 
+    /* === VARIANT 1: Editorial Atelier === */
     :root {
+      /* Typography System */
+      --font-heading: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-sub: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+
       /* Primary Light / White Palette */
       --lux-white: #FFFFFF;
       --lux-cream: #FAF9F5;
-      --lux-surface-light: #F4F3EE;
+      --lux-surface-light: #F5F4EE;
       --lux-surface-alt: #EFECE6;
-      --lux-border-light: #E5E2DA;
+      --lux-border-light: #E6E4DC;
       --lux-border-subtle: #ECEAE3;
       
       /* Dark Contrast Palette */
-      --lux-dark-bg: #0C0C0E;
-      --lux-dark-card: #141418;
+      --lux-dark-bg: #0A0B0E;
+      --lux-dark-card: #121318;
       --lux-dark-card-alt: #1B1B22;
       --lux-dark-border: rgba(255, 255, 255, 0.1);
       --lux-dark-border-subtle: rgba(255, 255, 255, 0.06);
 
-      /* Typography Tones */
-      --lux-text-dark: #121214;
-      --lux-text-body: #4A4A52;
-      --lux-text-muted: #7A7A85;
-      --lux-text-white: #FFFFFF;
-      --lux-text-white-dim: #D1D1D6;
+      /* Typography Tones (High Contrast & Non-Muddy) */
+      --lux-text-dark: #111114;
+      --lux-text-body: #464650;
+      --lux-text-muted: #747480;
+      --lux-text-white: #F8F8FA;
+      --lux-text-white-dim: #D4D4DC;
 
-      /* Gold Accent (Restrained, Warm, Metallic) */
-      --lux-gold: #B88E3E;
-      --lux-gold-light: #D4AF37;
-      --lux-gold-champagne: #E9D5A8;
-      --lux-gold-muted: #8E6D2B;
+      /* Gold Accent Palette */
+      --lux-gold: #C29B38;
+      --lux-gold-light: #E0BA5E;
+      --lux-gold-champagne: #F0DCAB;
+      --lux-gold-muted: #8E7025;
       --lux-gold-border: rgba(184, 142, 62, 0.35);
       --lux-gold-border-subtle: rgba(184, 142, 62, 0.18);
 
-      /* Consistent Radii Across All Boxes */
+      /* Consistent Radii */
       --radius-box: 16px;
       --radius-sm: 8px;
       --radius-pill: 40px;
+    }
+
+    /* Headings Typography System */
+    h1, h2, h3, h4, h5, h6,
+    .hero-main-heading,
+    .lux-section-title-dark,
+    .lux-section-title-light,
+    .card-title,
+    .usp-heading,
+    .action-title,
+    .workforce-content h2,
+    .dealers-header h2,
+    .faq-header h2,
+    .tech-card h3,
+    .accordion-header h3,
+    .modal h3 {
+      font-family: var(--font-heading) !important;
+      letter-spacing: -0.01em !important;
+    }
+
+    .hero-main-heading {
+      font-weight: 500 !important;
+      line-height: 1.08 !important;
+    }
+    .hero-main-heading .gold-title-accent {
+      font-family: var(--font-heading) !important;
+      color: var(--lux-gold-light) !important;
+      font-style: italic; font-weight: 400; color: #E0BA5E !important;
+    }
+
+    .lux-section-title-dark,
+    .lux-section-title-light {
+      font-weight: 500 !important;
+    }
+
+    /* Subheads & Card Titles */
+    .card-title {
+      font-family: var(--font-sub) !important;
+      font-weight: 600 !important;
+      letter-spacing: -0.01em !important;
+    }
+
+    /* Eyebrow & Badge Typography */
+    .lux-eyebrow {
+      font-family: var(--font-body) !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.22em !important;
+      color: #A37B24 !important;
+    }
+    .hero-content-col .lux-eyebrow {
+      color: var(--lux-gold-champagne) !important;
+    }
+
+    /* High Contrast Gold Buttons (Dark text for maximum readability) */
+    .btn-lux-gold {
+      background-color: var(--lux-gold) !important;
+      color: #0A0A0C !important;
+      border-color: var(--lux-gold) !important;
+      font-weight: 600 !important;
+    }
+    .btn-lux-gold:hover {
+      background-color: var(--lux-gold-light) !important;
+      border-color: var(--lux-gold-light) !important;
+      color: #000000 !important;
+    }
+
+    /* Refined Luxury Hero Pills */
+    .hero-pill-feature {
+      background: rgba(255, 255, 255, 0.05) !important;
+      border: 1px solid rgba(224, 186, 94, 0.28) !important;
+      padding: 5px 14px !important;
+      border-radius: 30px !important;
+      color: #EBEBF2 !important;
+      font-size: 11px !important;
+      font-weight: 500 !important;
+      letter-spacing: 0.04em !important;
+      text-transform: uppercase !important;
+    }
+    .hero-pill-dot {
+      width: 4.5px !important;
+      height: 4.5px !important;
+      background-color: var(--lux-gold-light) !important;
     }
 
     html {
@@ -4894,11 +4982,12 @@ Lahore, Punjab</a>
   </script>
 
   <!-- LUXURY DESIGN VARIANT SWITCHER (EASY MANAGER REVIEW) -->
+  <!-- LUXURY DESIGN VARIANT SWITCHER (EASY MANAGER REVIEW) -->
   <aside class="lux-variant-bar" aria-label="Variant Switcher">
     <span class="lux-variant-label">DESIGN VARIANTS:</span>
-    <a href="variant-1.html" class="lux-variant-btn">1. Atelier (Cormorant)</a>
-    <a href="variant-2.html" class="lux-variant-btn">2. Modern Couture (Playfair)</a>
-    <a href="variant-3.html" class="lux-variant-btn">3. Venetian Heritage (Cinzel)</a>
+    <a href="variant-1.html" class="lux-variant-btn active">1. Atelier (Cormorant)</a>
+    <a href="variant-2.html" class="lux-variant-btn ">2. Modern Couture (Playfair)</a>
+    <a href="variant-3.html" class="lux-variant-btn ">3. Venetian Heritage (Cinzel)</a>
   </aside>
 
 </body>
